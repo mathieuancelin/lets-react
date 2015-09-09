@@ -1,5 +1,5 @@
 import React from "react/addons";
-import Heading from "../src/heading";
+import Heading from "../../src/heading";
 
 class Interactive extends React.Component {
   constructor(props) {

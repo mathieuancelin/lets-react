@@ -19,6 +19,7 @@
     "highlight.js": "^8.6.0",
     "hjs-webpack": "^2.8.1",
     "lodash": "^3.9.3",
+    "moment": "^2.10.6",
     "normalize.css": "^3.0.3",
     "object-assign": "^3.0.0",
     "radium": "^0.13.2",

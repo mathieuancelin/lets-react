@@ -1,7 +1,7 @@
 import React from "react/addons";
-import Heading from "../src/heading";
-import RunnableComponentMixin from './utils/runnablecomponentmixin';
-import * as Feed from './utils/ScheduledFeed';
+import Heading from "../../src/heading";
+import RunnableComponentMixin from '../utils/runnablecomponentmixin';
+import * as Feed from '../utils/ScheduledFeed';
 
 const styles = {
   padding: 20,
