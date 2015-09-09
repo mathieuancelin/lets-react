@@ -13,6 +13,7 @@ webpackConfig.devServer.enhanceApp = function(app) {
 };
 
 webpackConfig.devServer.host = '0.0.0.0';
+webpackConfig.devServer.contentBase = './public';
 
 webpackConfig.module.loaders[0] = {
   test: /(\.js$)|(\.jsx$)/,
