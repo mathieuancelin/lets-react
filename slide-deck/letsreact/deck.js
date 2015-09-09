@@ -172,7 +172,7 @@ export default class extends React.Component {
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
           <Heading size={1} caps>DEMO</Heading>
-          <iframe src="http://mathieuancelin.github.io/js-repaint-perfs/" style={{ width: '100%', height: '100%' }}/>
+          <iframe src="http://mathieuancelin.github.io/js-repaint-perfs/" frameBorder="0" style={{ width: '1024px', height: '600px' }}/>
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
           <Heading size={1} caps fit>Votre premier composant</Heading>

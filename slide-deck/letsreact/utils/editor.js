@@ -81,6 +81,7 @@ export default React.createClass({
       if (nextProps.onLoad) {
         nextProps.onLoad(this.editor);
       }
+      setTimeout(() => this.editor.getSession().foldAll(1, 999, 0), 200);
     }
     console.log('moving cursor to', position);
     this.editor.moveCursorToPosition(position);
@@ -110,6 +111,7 @@ export default React.createClass({
     this.editor.setOption('highlightActiveLine', this.props.highlightActiveLine);
     this.editor.setShowPrintMargin(this.props.setShowPrintMargin);
     this.editor.on('change', this.onChange);
+    setTimeout(() => this.editor.getSession().foldAll(1, 999, 0), 200);
 
     this.editor.commands.addCommand({
       name: 'Save and reload',
