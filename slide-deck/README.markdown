@@ -1,5 +1,7 @@
 #Let's React
 
+A React presentation with live component editing based on the awesome [React Spectacle](http://projects.formidablelabs.com/spectacle/#/) lib.
+
 ```
 npm install
 npm start
@@ -20,3 +22,5 @@ app.use(this.middleware = webpackDevMiddleware(compiler, options));
 // here, add the following line :
 (options.enhanceApp || function() {})(app);
 ```
+
+Then in slides with editor, change the code, and hit `Ctrl-S` or  `Command-S`
