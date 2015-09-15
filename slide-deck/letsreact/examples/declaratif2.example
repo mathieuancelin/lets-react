@@ -1,0 +1,5 @@
+if (this.state.favorite) {
+  return <GreyStar />;
+} else {
+  return <WhiteStar />;
+}

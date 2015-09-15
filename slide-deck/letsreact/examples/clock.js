@@ -106,7 +106,7 @@ export default React.createClass({
   render() {
     return (
       <div style={{ marginLeft: '40px' }}>
-        <h1>Hello World!</h1>
+        <NiceClock />
       </div>
     );
   }

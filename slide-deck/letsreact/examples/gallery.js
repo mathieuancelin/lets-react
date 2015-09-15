@@ -29,7 +29,7 @@ const cell = {
   display: 'block',
   width: '90px',
   height: '90px',
-  marginBottom: '5px'
+  marginBottom: '20px'
 };
 
 const img = {
@@ -53,7 +53,7 @@ export default React.createClass({
     if (!this.state.started) {
       console.log('Start Flickr streaming');
       this.setState({ started: true }, () => {
-        this.stopStream = Feed.stream(25, 4000, () => this.setState({ items: Feed.getItems() }));
+        this.stopStream = Feed.stream(22, 4000, () => this.setState({ items: Feed.getItems() }));
       });
     }
   },

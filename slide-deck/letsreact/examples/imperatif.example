@@ -1,0 +1,11 @@
+if (userFavorites()) {
+  if (!hasGreyFavorite()) {
+    removeWhiteFavorite();
+    addGreyFavorite();
+  }
+} else {
+  if (hasGreyFavorite()) {
+    removeGreyFavorite();
+    addWhiteFavorite();
+  }
+}
