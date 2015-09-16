@@ -54,7 +54,7 @@ export default class extends React.Component {
   render() {
     return (
       <Deck transition={['slide']} transitionDuration={800}>
-        <Slide bgColor="primary" bgImage={images.jsc.replace("/", "")} bgDarken={0.20}>
+        <Slide bgColor="primary" bgImage={images.jsc.replace("/", "")} bgDarken={0.01}>
           <Heading size={1} textColor="#252525"    fit caps textColor="#1c6e8a">
             Let's React
           </Heading>
@@ -305,7 +305,7 @@ export default class extends React.Component {
         </Slide>
         */}
         <Slide bgColor="primary" textColor="black" align="center top">
-          <iframe src="http://mathieuancelin.github.io/js-repaint-perfs/" frameBorder="0" style={{ marginTop: '50px', width: '1024px', height: '600px' }}/>
+          <iframe src="http://mathieuancelin.github.io/js-repaint-perfs/" frameBorder="0" style={{ marginTop: '50px', width: '1024px', height: '600px', backgroundColor: 'white' }}/>
         </Slide>
         {/*<Slide bgColor="primary" textColor="black" align="center top">
           <Heading size={1} textColor="#252525" caps fit>Votre premier composant</Heading>

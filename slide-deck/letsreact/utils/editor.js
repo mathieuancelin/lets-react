@@ -3,9 +3,10 @@ import brace from 'brace';
 
 const fetch = window.fetch;
 
-require('brace/mode/javascript')
-require('brace/mode/jsx')
-require('brace/theme/github')
+require('brace/mode/javascript');
+require('brace/mode/jsx');
+require('brace/theme/github');
+require('brace/ext/language_tools');
 
 let currentValue = "";
 
@@ -74,6 +75,9 @@ export default React.createClass({
       this.editor.setOption('maxLines', nextProps.maxLines);
       this.editor.setOption('readOnly', nextProps.readOnly);
       this.editor.setOption('highlightActiveLine', nextProps.highlightActiveLine);
+      this.editor.setOption('enableBasicAutocompletion', true);
+      this.editor.setOption('enableSnippets', true);
+      this.editor.setOption('enableLiveAutocompletion', true);
       this.editor.setShowPrintMargin(nextProps.setShowPrintMargin);
       if (this.editor.getValue() !== nextProps.value) {
         this.editor.setValue(nextProps.value, nextProps.cursorStart);
@@ -112,7 +116,18 @@ export default React.createClass({
     this.editor.setOption('maxLines', this.props.maxLines);
     this.editor.setOption('readOnly', this.props.readOnly);
     this.editor.setOption('highlightActiveLine', this.props.highlightActiveLine);
+    this.editor.setOption('enableBasicAutocompletion', true);
+    this.editor.setOption('enableSnippets', true);
+    this.editor.setOption('enableLiveAutocompletion', true);
     this.editor.setShowPrintMargin(this.props.setShowPrintMargin);
+    /*this.editor.insertSnippet(`snippet comp
+    React.createClass({
+      render() {
+        return (
+          ${1}
+        );
+      }
+    })`, 'javascript');*/
     this.editor.on('change', this.onChange);
     if (this.props.collapse) {
       setTimeout(() => this.editor.getSession().foldAll(1, 999, 0), 200);
