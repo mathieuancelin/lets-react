@@ -53,7 +53,7 @@ preloader([images.mathieu]);
 export default class extends React.Component {
   render() {
     return (
-      <Deck transition={['zoom','slide']} transitionDuration={800}>
+      <Deck transition={['slide']} transitionDuration={800}>
         <Slide bgColor="primary" bgImage={images.jsc.replace("/", "")} bgDarken={0.20}>
           <Heading size={1} textColor="#252525"    fit caps textColor="#1c6e8a">
             Let's React
@@ -211,7 +211,7 @@ export default class extends React.Component {
             <Bullet tab={1}>on en invente tous les jours ...</Bullet>
           </BulletList>
         </Slide>
-        <Slide transition={["zoom", "slide"]} bgColor="primary">
+        <Slide bgColor="primary">
           <Heading textColor="#252525" caps size={1} fit>Everything is a component</Heading>
           <Heading caps size={2}>even the slides</Heading>
           <Layout>
@@ -269,12 +269,12 @@ export default class extends React.Component {
           <Layout>
             <Appear fid="1">
               <Fill>
-                <Image src={images.treeBefore.replace('/','')} width="100%" height="100%" />
+                <Image src={images.treeBefore.replace('/','')} style={{ backgroundColor: 'white' }} width="100%" height="100%" />
               </Fill>
             </Appear>
             <Appear fid="2">
               <Fill>
-              <Image src={images.treeAfter.replace('/','')} width="100%" height="100%" />
+                <Image src={images.treeAfter.replace('/','')} style={{ marginLeft: 5, backgroundColor: 'white' }} width="100%" height="100%" />
               </Fill>
             </Appear>
           </Layout>
@@ -348,7 +348,7 @@ export default class extends React.Component {
             <Bullet>Necéssite de la validation pour pouvoir y accéder</Bullet>
           </BulletList>
         </Slide>
-        <Slide transition={["zoom", "fade"]} bgColor="primary">
+        <Slide bgColor="primary">
           {/*<Heading caps textColor="#252525">Context</Heading>*/}
           <EditableComponent component={Gallery} file="letsreact/examples/gallery.js" />
         </Slide>
@@ -364,11 +364,11 @@ export default class extends React.Component {
             <Bullet>componentWillUnmount</Bullet>
           </BulletList>
         </Slide>
-        <Slide transition={["zoom", "fade"]} bgColor="primary">
+        <Slide bgColor="primary">
           <Heading caps textColor="#252525">Cycle de vie</Heading>
           <EditableComponent component={Hello} file="letsreact/examples/hello.js" />
         </Slide>
-        <Slide transition={["zoom", "fade"]} bgColor="primary">
+        <Slide bgColor="primary">
           <Heading caps textColor="#252525">Validation</Heading>
           <CodePane
             textSize={30}
@@ -380,28 +380,27 @@ export default class extends React.Component {
           <Heading size={1} textColor="#252525" caps>Mixins</Heading>
           <EditableComponent component={Hello} file="letsreact/examples/hello.js" />
         </Slide>
-        {/*<Slide transition={["zoom", "fade"]} bgColor="primary">
+        {/*<Slide bgColor="primary">
           <Heading caps fit>The Clicker component</Heading>
           <EditableComponent component={Clicker} file="letsreact/examples/clicker.js" />
         </Slide>*/}
-        <Slide transition={["zoom", "slide"]} bgColor="primary">
+        <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>Tests</Heading>
         </Slide>
-        <Slide transition={["zoom", "slide"]} bgColor="primary">
+        <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>Ecosystème</Heading>
         </Slide>
-        <Slide transition={["zoom", "slide"]} bgColor="primary">
+        <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>React Native</Heading>
         </Slide>
-        <Slide transition={["zoom", "slide"]} bgColor="primary">
+        <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>Universal apps</Heading>
         </Slide>
-        <Slide transition={["zoom", "slide"]} bgColor="primary">
+        <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>Webcomponents</Heading>
         </Slide>
-        <Slide transition={["zoom", "slide"]} bgColor="primary">
-          <Heading caps textColor="#252525">Demo Reddit</Heading>
-          <Reddit />
+        <Slide bgColor="primary">
+          <EditableComponent component={Reddit} file="letsreact/examples/reddit.js" />
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
           <Heading caps textColor="#252525" >Demo</Heading>

@@ -1,20 +1,23 @@
 import React from 'react';
 
+const maxHeight = 200;
+const height = 300;
 const Styles = {
   container: {
     display: 'flex',
     flexDirection: 'column',
-    border: 'solid 1px black',
+    border: 'solid 1px #f9c300',
     width: '100%',
-    height: 500,
-    marginTop: 30
+    height: height,
+    marginTop: 30,
+    backgroundColor: 'white'
   },
   top: {
     justifyContent: 'flex-end',
     alignItems: 'center',
     display: 'flex',
     height: '10%',
-    borderBottom: 'solid 1px black',
+    borderBottom: 'solid 10px #f9c300',
   },
   bottom: {
     display: 'flex',
@@ -24,7 +27,7 @@ const Styles = {
     display: 'flex',
     flexDirection: 'column',
     width: '30%',
-    borderRight: 'solid 1px black',
+    borderRight: 'solid 10px #f9c300',
     overflowY: 'auto',
   },
   viewer: {
@@ -41,7 +44,7 @@ const Styles = {
     alignItems: 'center',
     width: '100%',
     height: '33%',
-    borderBottom: 'solid 1px black',
+    borderBottom: 'solid 1px white',
     textAlign: 'left',
   }
 };
@@ -67,14 +70,19 @@ const StoryCell = React.createClass({
     this.props.select(this.props.story);
   },
   render() {
-    let selectedStyle = {...Styles.story};
+    let style = {...Styles.story};
+    if (this.props.unread) {
+      style = {...style, ...{ fontWeight: 'bold' }};
+    } else {
+      style = {...style, ...{ color: 'lightgrey' }};
+    }
     if (this.props.selected.id === this.props.story.id) {
-      selectedStyle = {...selectedStyle, ...{ backgroundColor: 'grey' }};
+      style = {...style, ...{ backgroundColor: '#f9c300', color: 'black' }};
     }
     return (
-      <div style={selectedStyle} onClick={this.select}>
+      <div style={style} onClick={this.select}>
         <img src={this.props.story.thumbnail} width={60} height={60} />
-        <p style={{ marginLeft: 5 }}>{this.props.story.title}</p>
+        <p style={{ marginLeft: 5 }}>{this.props.story.title.substring(0, 50)} {this.props.story.title.length > 50 ? '...' : ''}</p>
       </div>
     );
   }
@@ -89,7 +97,7 @@ const Sidebar = React.createClass({
       <div style={Styles.sidebar}>
         {this.props.stories
           .map(story => story.data)
-          .map(story => <StoryCell story={story} select={this.props.select} selected={this.props.selected} />)}
+          .map(story => <StoryCell story={story} select={this.props.select} selected={this.props.selected} unread={this.props.read.indexOf(story.id) < 0} />)}
       </div>
     );
   }
@@ -107,9 +115,9 @@ const Viewer = React.createClass({
       let source = this.props.story.preview.images[0].source;
       let ratio = 1.0;
       if (source.height > source.width) {
-        ratio = 350 / source.height;
+        ratio = maxHeight / source.height;
       } else {
-        ratio = 350 / source.width;
+        ratio = maxHeight / source.width;
       }
       return (
         <div style={Styles.viewer}>
@@ -154,7 +162,7 @@ const Reddit = React.createClass({
       <div style={Styles.container}>
         <TopBar read={this.state.read} stories={this.state.stories.map(s => s.data.id)}/>
         <div style={Styles.bottom}>
-          <Sidebar stories={this.state.stories} select={this.select} selected={this.state.selected} />
+          <Sidebar stories={this.state.stories} select={this.select} selected={this.state.selected} read={this.state.read} />
           <Viewer story={this.state.selected}/>
         </div>
       </div>
@@ -165,7 +173,7 @@ const Reddit = React.createClass({
 export default React.createClass({
   render() {
     return (
-      <Reddit subreddit="funny" />
+      <Reddit subreddit="pics" />
     );
   }
 });

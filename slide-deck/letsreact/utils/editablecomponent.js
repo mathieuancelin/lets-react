@@ -24,7 +24,7 @@ export default React.createClass({
             </div>
           </Layout>
           <Layout size={4} textColor="secondary" bgColor="white" align="left top" margin={10}>
-            <Editor file={this.props.file} collapse={this.props.collapse} width={1024} height={300}/>
+            <Editor file={this.props.file} collapse={this.props.collapse} width="944" height={300}/>
           </Layout>
         </div>
       </Layout>
