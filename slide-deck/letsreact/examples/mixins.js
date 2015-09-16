@@ -1,30 +1,36 @@
+import React from 'react';
+
 const SetIntervalMixin = {
   componentWillMount() {
     this.intervals = [];
   },
-  setInterval(cb, delay) {
-    this.intervals.push(setInterval(cb, delay));
+  every(delay) {
+    let that = this;
+    return {
+      run(cb) {
+        that.intervals.push(setInterval(cb, delay));
+      }
+    };
   },
   componentWillUnmount() {
     this.intervals.map(clearInterval);
   }
 };
 
-
-const TickTock = React.createClass({
+export default React.createClass({
   mixins: [SetIntervalMixin],
   getInitialState() {
     return {seconds: 0};
   },
   componentDidMount() {
-    this.setInterval(this.tick, 1000);
+    this.every(1000).run(this.tick);
   },
   tick() {
     this.setState({seconds: this.state.seconds + 1});
   },
   render() {
     return (
-      <p>React has been running for {this.state.seconds} seconds.</p>
+      <p style={{ fontSize: 30 }}>React has been running for {this.state.seconds} seconds</p>
     );
   }
 });

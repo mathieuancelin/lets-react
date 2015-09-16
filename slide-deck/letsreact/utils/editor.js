@@ -135,6 +135,9 @@ export default React.createClass({
             '  }',
             '});'
           ].join('\n'));
+          that.currentPrefix = '';
+        } else {
+          that.editor.insert('  ');
         }
       }
     });

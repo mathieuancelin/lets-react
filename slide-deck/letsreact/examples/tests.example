@@ -1,0 +1,21 @@
+import React from 'react/addons';
+import Clicker from '../Clicker';
+
+jest.dontMock('../Clicker.js');
+
+describe('Clicker', () => {
+  it('changes count after click’, () => {
+    const TestUtils = React.addons.TestUtils;
+
+    const clicker = TestUtils.renderIntoDocument(<Clicker />);
+    const span = TestUtils.findRenderedDOMComponentWithTag(clicker, 'span');
+    const button = TestUtils.findRenderedDOMComponentWithTag(clicker, 'button');
+
+    expect(span.getDOMNode().textContent).toEqual('You have clicked 0 times');
+    
+    TestUtils.Simulate.click(button);
+    
+    expect(span.getDOMNode().textContent).toEqual('You have clicked 1 times');
+    
+  });
+});

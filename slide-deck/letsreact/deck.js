@@ -12,6 +12,7 @@ import Gallery from "./examples/gallery";
 import Clock from "./examples/clock";
 import FirstComponent from "./examples/firstcomponent";
 import Reddit from "./examples/reddit";
+import MixinsExample from "./examples/mixins";
 import Hello from "./examples/hello";
 import HelloProps from "./examples/helloprops";
 import FirstComponentJSX from "./examples/firstcomponentjsx";
@@ -378,7 +379,7 @@ export default class extends React.Component {
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
           <Heading size={1} textColor="#252525" caps>Mixins</Heading>
-          <EditableComponent component={Hello} file="letsreact/examples/hello.js" />
+          <EditableComponent component={MixinsExample} file="letsreact/examples/mixins.js" />
         </Slide>
         {/*<Slide bgColor="primary">
           <Heading caps fit>The Clicker component</Heading>
@@ -386,9 +387,33 @@ export default class extends React.Component {
         </Slide>*/}
         <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>Tests</Heading>
+          <Editor file="letsreact/examples/tests.example" width="100%" height={500}/>
         </Slide>
         <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>Ecosystème</Heading>
+          <Layout>
+            <Fill>
+              <BulletList>
+                <Bullet>React Router</Bullet>
+                <Bullet>Flux (Redux)</Bullet>
+                <Bullet>Radium</Bullet>
+                <Bullet>JSXStyle</Bullet>
+                <Bullet>React canvas</Bullet>
+                <Bullet>React art</Bullet>
+                <Bullet>React motion</Bullet>
+              </BulletList>
+            </Fill>
+            <Fill>
+              <BulletList>
+                <Bullet>React native</Bullet>
+                <Bullet>GraphQL</Bullet>
+                <Bullet>Relay</Bullet>
+                <Bullet>React hot loader</Bullet>
+                <Bullet>Awesome React</Bullet>
+                <Bullet>...</Bullet>
+              </BulletList>
+            </Fill>
+          </Layout>
         </Slide>
         <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>React Native</Heading>
@@ -403,8 +428,10 @@ export default class extends React.Component {
           <EditableComponent component={Reddit} file="letsreact/examples/reddit.js" />
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
-          <Heading caps textColor="#252525" >Demo</Heading>
           <EditableComponent component={Clock} file="letsreact/examples/clock.js" />
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading size={1} textColor="#252525" caps>Conclusion</Heading>
         </Slide>
       </Deck>
     )
