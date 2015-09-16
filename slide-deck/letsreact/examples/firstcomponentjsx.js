@@ -1,5 +1,24 @@
 import React from 'react';
 
+const LikesBackup = React.createClass({
+  getInitialState() {
+    return { likes: 0 };
+  },
+  like() {
+    this.setState({ likes: this.state.likes + 1 });
+  },
+  render() {
+    return (
+      <div style={Style.container}>
+        <span style={Style.label}>Likes : {this.state.likes}</span>
+        <button type="button" onClick={this.like} style={Style.button}>
+          +1
+        </button>
+      </div>
+    );
+  }
+});
+
 const Style = {
   container: {
     display: 'flex',
@@ -28,25 +47,6 @@ const Style = {
     margin: '0.5em auto',
   }
 };
-
-const Likes = React.createClass({
-  getInitialState() {
-    return { likes: 0 };
-  },
-  like() {
-    this.setState({ likes: this.state.likes + 1 });
-  },
-  render() {
-    return (
-      <div style={Style.container}>
-        <span style={Style.label}>Likes : {this.state.likes}</span>
-        <button type="button" onClick={this.like} style={Style.button}>
-          +1
-        </button>
-      </div>
-    );
-  }
-});
 
 export default React.createClass({
   render() {

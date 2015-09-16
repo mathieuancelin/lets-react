@@ -1,13 +1,6 @@
 import React from 'react';
 
-const Style = {
-  container: {
-    backgroundColor: 'white',
-    padding: '10px 30px 10px 30px'
-  }
-};
-
-const HelloWho = React.createClass({
+const HelloWhoBackup = React.createClass({
   getDefaultProps() {
     return {
       who: 'JSC'
@@ -19,14 +12,20 @@ const HelloWho = React.createClass({
     );
   }
 });
-
-const Bordered = React.createClass({
+const BorderedBackup = React.createClass({
   render() {
     return (
       <div style={{ border: 'solid 1px black', padding: '10px 10px 10px 10px' }}>{this.props.children}</div>
     );
   }
 });
+
+const Style = {
+  container: {
+    backgroundColor: 'white',
+    padding: '10px 30px 10px 30px'
+  }
+};
 
 export default React.createClass({
   render() {

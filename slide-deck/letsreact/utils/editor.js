@@ -105,6 +105,7 @@ export default React.createClass({
 
   setupSnippets() {
     var that = this;
+    this.editor.getSession().setTabSize(2);
     this.editor.commands.addCommand({
       name: 'Move up',
       bindKey: { mac: 'Command-Ctrl-Up'},
