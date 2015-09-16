@@ -11,6 +11,7 @@ import Clicker from "./examples/clicker";
 import Gallery from "./examples/gallery";
 import Clock from "./examples/clock";
 import FirstComponent from "./examples/firstcomponent";
+import Reddit from "./examples/reddit";
 import Hello from "./examples/hello";
 import HelloProps from "./examples/helloprops";
 import FirstComponentJSX from "./examples/firstcomponentjsx";
@@ -25,6 +26,9 @@ const images = {
   etoiles: require("./images/etoiles.png"),
   favorite: require("./images/favorites.png"),
   dafuq: require("./images/dafuq.jpg"),
+  trees: require("./images/trees.png"),
+  treeBefore: require("./images/tree-before.png"),
+  treeAfter: require("./images/tree-after.png"),
 };
 
 const BulletList = React.createClass({
@@ -208,7 +212,7 @@ export default class extends React.Component {
           </BulletList>
         </Slide>
         <Slide transition={["zoom", "slide"]} bgColor="primary">
-          <Heading caps fit size={1}>Everything is a component</Heading>
+          <Heading textColor="#252525" caps size={1} fit>Everything is a component</Heading>
           <Heading caps size={2}>even the slides</Heading>
           <Layout>
             <Editor file="letsreact/deck.js" width="100%" height={500}/>
@@ -223,6 +227,7 @@ export default class extends React.Component {
         <Slide bgColor="primary" textColor="black" align="center top">
           <Heading size={1} textColor="#252525" caps>Code impératif</Heading>
           <CodePane
+            textSize={30}
             lang="javascript"
             source={require("raw!./examples/imperatif.example")}
             margin="20px auto" />
@@ -230,6 +235,7 @@ export default class extends React.Component {
         <Slide bgColor="primary" textColor="black" align="center top">
           <Heading size={1} textColor="#252525" caps>Code déclaratif</Heading>
           <CodePane
+            textSize={30}
             lang="javascript"
             source={require("raw!./examples/declaratif1.example")}
             margin="20px auto" />
@@ -237,6 +243,7 @@ export default class extends React.Component {
         <Slide bgColor="primary" textColor="black" align="center top">
           <Heading size={1} textColor="#252525" caps>Code déclaratif</Heading>
           <CodePane
+            textSize={30}
             lang="javascript"
             source={require("raw!./examples/declaratif2.example")}
             margin="20px auto" />
@@ -247,7 +254,7 @@ export default class extends React.Component {
           </Fill>
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
-          <Heading size={1} textColor="#252525" caps>Diffs de la vue</Heading>
+          <Heading size={1} textColor="#252525" caps>Virtual DOM</Heading>
           <BulletList>
             <Bullet>React calcule la plus petite liste de changements possible à appliquer à la vue</Bullet>
             <Bullet>Applique les changements en batch dans le DOM</Bullet>
@@ -259,6 +266,21 @@ export default class extends React.Component {
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
           <Heading size={1} textColor="#252525" caps>Virtual DOM</Heading>
+          <Layout>
+            <Appear fid="1">
+              <Fill>
+                <Image src={images.treeBefore.replace('/','')} width="100%" height="100%" />
+              </Fill>
+            </Appear>
+            <Appear fid="2">
+              <Fill>
+              <Image src={images.treeAfter.replace('/','')} width="100%" height="100%" />
+              </Fill>
+            </Appear>
+          </Layout>
+        </Slide>
+        {/*<Slide bgColor="primary" textColor="black" align="center top">
+          <Heading size={1} textColor="#252525" caps>Virtual DOM</Heading>
           <BulletList>
             <Bullet>React rend entièrement la vue à chaque changement de son modèle</Bullet>
             <Bullet tab={1}>il très très compliqué de patcher la vue à la main quand les données changent en permanence => effets de bord</Bullet>
@@ -268,7 +290,7 @@ export default class extends React.Component {
             <Bullet tab={2}>calcule une liste de différences minimale</Bullet>
             <Bullet tab={1}>React batch tous les changements nécessaires vers le DOM</Bullet>
           </BulletList>
-        </Slide>
+        </Slide>*/}
         {/*
         <Slide bgColor="primary" textColor="black" align="center top">
           <Heading size={1} textColor="#252525" caps>Synthetic events</Heading>
@@ -349,6 +371,7 @@ export default class extends React.Component {
         <Slide transition={["zoom", "fade"]} bgColor="primary">
           <Heading caps textColor="#252525">Validation</Heading>
           <CodePane
+            textSize={30}
             lang="javascript"
             source={require("raw!./examples/propsvalidation.example")}
             margin="20px auto" />
@@ -378,6 +401,7 @@ export default class extends React.Component {
         </Slide>
         <Slide transition={["zoom", "slide"]} bgColor="primary">
           <Heading caps textColor="#252525">Demo Reddit</Heading>
+          <Reddit />
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
           <Heading caps textColor="#252525" >Demo</Heading>

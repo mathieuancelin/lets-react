@@ -1,4 +1,6 @@
-var MyComponent = React.createClass({
+import React from 'react';
+
+const MyComponent = React.createClass({
   propTypes: {
     tasks: React.PropTypes.array,
     displayDate: React.PropTypes.bool,

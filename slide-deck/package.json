@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "alt": "^0.16.10",
+    "babel-runtime": "^5.8.24",
     "body-parser": "^1.13.3",
     "brace": "^0.5.1",
     "express": "^4.13.3",
