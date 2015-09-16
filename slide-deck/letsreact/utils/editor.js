@@ -3,10 +3,13 @@ import brace from 'brace';
 
 const fetch = window.fetch;
 
+var ace = require('brace');
+require('brace/mode/snippets');
 require('brace/mode/javascript');
 require('brace/mode/jsx');
 require('brace/theme/github');
 require('brace/ext/language_tools');
+var langTools = ace.acequire("ace/ext/language_tools");
 
 let currentValue = "";
 
@@ -39,7 +42,7 @@ export default React.createClass({
   getDefaultProps: function() {
     return {
       name   : 'brace-editor',
-      mode   : 'jsx',
+      mode   : 'javascript',
       theme  : 'github',
       height : '600px',
       width  : '100%',
@@ -76,8 +79,9 @@ export default React.createClass({
       this.editor.setOption('readOnly', nextProps.readOnly);
       this.editor.setOption('highlightActiveLine', nextProps.highlightActiveLine);
       this.editor.setOption('enableBasicAutocompletion', true);
-      this.editor.setOption('enableSnippets', true);
+      this.editor.setOption('enableSnippets', false);
       this.editor.setOption('enableLiveAutocompletion', true);
+      this.setupSnippets();
       this.editor.setShowPrintMargin(nextProps.setShowPrintMargin);
       if (this.editor.getValue() !== nextProps.value) {
         this.editor.setValue(nextProps.value, nextProps.cursorStart);
@@ -99,6 +103,42 @@ export default React.createClass({
     //this.fetchContent();
   },
 
+  setupSnippets() {
+    var that = this;
+    this.editor.commands.addCommand({
+      name: 'Move up',
+      bindKey: { mac: 'Command-Ctrl-Up'},
+      exec(editor) {
+        editor.moveLinesUp();
+      }
+    });
+    this.editor.commands.addCommand({
+      name: 'Move down',
+      bindKey: { mac: 'Command-Ctrl-Down'},
+      exec(editor) {
+        editor.moveLinesDown();
+      }
+    });
+    this.editor.commands.addCommand({
+      name: 'Custom snippets',
+      bindKey: { win: 'Tab', mac: 'Tab' },
+      exec(editor) {
+        if (that.currentPrefix === 'reactclas') {
+          that.editor.removeWordLeft();
+          that.editor.insert([
+            'React.createClass({',
+            '  render() {',
+            '    return (',
+            '      ',
+            '    );',
+            '  }',
+            '});'
+          ].join('\n'));
+        }
+      }
+    });
+  },
+
   componentDidMount: function() {
     currentValue = this.props.value;
     this.editor = ace.edit(this.props.name);
@@ -117,17 +157,16 @@ export default React.createClass({
     this.editor.setOption('readOnly', this.props.readOnly);
     this.editor.setOption('highlightActiveLine', this.props.highlightActiveLine);
     this.editor.setOption('enableBasicAutocompletion', true);
-    this.editor.setOption('enableSnippets', true);
-    this.editor.setOption('enableLiveAutocompletion', true);
+    this.editor.setOption('enableSnippets', false);
+    this.editor.setOption('enableLiveAutocompletion', false);
     this.editor.setShowPrintMargin(this.props.setShowPrintMargin);
-    /*this.editor.insertSnippet(`snippet comp
-    React.createClass({
-      render() {
-        return (
-          ${1}
-        );
-      }
-    })`, 'javascript');*/
+    let that = this;
+    langTools.addCompleter({
+        getCompletions(editor, session, pos, prefix, callback) {
+           that.currentPrefix = prefix;
+        }
+    });
+    this.setupSnippets();
     this.editor.on('change', this.onChange);
     if (this.props.collapse) {
       setTimeout(() => this.editor.getSession().foldAll(1, 999, 0), 200);

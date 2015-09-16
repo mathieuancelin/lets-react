@@ -348,10 +348,10 @@ export default class extends React.Component {
             <Bullet>Necéssite de la validation pour pouvoir y accéder</Bullet>
           </BulletList>
         </Slide>
-        <Slide bgColor="primary">
-          {/*<Heading caps textColor="#252525">Context</Heading>*/}
+        {/*<Slide bgColor="primary">
+          <Heading caps textColor="#252525">Context</Heading>
           <EditableComponent component={Gallery} file="letsreact/examples/gallery.js" />
-        </Slide>
+        </Slide>*/}
         <Slide bgColor="primary" textColor="black" align="center top">
           <Heading size={1} textColor="#252525" caps>Cycle de vie</Heading>
           <BulletList>
@@ -371,7 +371,7 @@ export default class extends React.Component {
         <Slide bgColor="primary">
           <Heading caps textColor="#252525">Validation</Heading>
           <CodePane
-            textSize={30}
+            textSize={28}
             lang="javascript"
             source={require("raw!./examples/propsvalidation.example")}
             margin="20px auto" />

@@ -11,7 +11,4 @@ const MyComponent = React.createClass({
     required: React.PropTypes.*.isRequired,
     ...
   },
-  render() {
-    ...
-  }
 });
