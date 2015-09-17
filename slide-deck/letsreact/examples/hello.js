@@ -1,5 +1,15 @@
 import React from 'react';
 
+const HelloBackup = React.createClass({
+  render() {
+    return (
+      <div style={Style.container} onClick={() => this.forceUpdate()}>
+        <h1>Hello JSC! ({Date.now()})</h1>
+      </div>
+    );
+  }
+});
+
 const Style = {
   container: {
     backgroundColor: 'white',
