@@ -16,6 +16,7 @@ import RedditLive from "./examples/redditlive";
 import MixinsExample from "./examples/mixins";
 import Hello from "./examples/hello";
 import HelloProps from "./examples/helloprops";
+import HelloLifecycle from "./examples/hellolifecycle";
 import FirstComponentJSX from "./examples/firstcomponentjsx";
 
 import EditableComponent from "./utils/editablecomponent";
@@ -368,7 +369,7 @@ export default class extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Heading caps textColor="#252525">Cycle de vie</Heading>
-          <EditableComponent component={Hello} file="letsreact/examples/hello.js" />
+          <EditableComponent component={HelloLifecycle} file="letsreact/examples/hellolifecycle.js" />
         </Slide>
         <Slide bgColor="primary">
           <Heading caps textColor="#252525">Validation</Heading>
