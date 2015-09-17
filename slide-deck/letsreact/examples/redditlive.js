@@ -72,6 +72,7 @@ function computeImageStyle(source) {
   };
 }
 function shrinkedTitle(story) {
+  if (!story) return '--';
   return story.title.substring(0, 50) + (story.title.length > 50 ? '...' : '');
 }
 function computeCellStyle(props) {
@@ -81,7 +82,7 @@ function computeCellStyle(props) {
   } else {
     style = {...style, ...{ color: 'lightgrey' }};
   }
-  if (props.selected.id === props.story.id) {
+  if (props.selected && props.selected.id === props.story.id) {
     style = {...style, ...{ backgroundColor: '#f9c300', color: 'black' }};
   }
   return style;
