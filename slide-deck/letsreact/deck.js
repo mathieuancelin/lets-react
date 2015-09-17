@@ -106,9 +106,7 @@ export default class extends React.Component {
           </BulletList>
         </Slide>
         <Slide bgColor="secondary">
-          <Heading size={1} textColor="white"    fit caps>
-            React
-          </Heading>
+          <Heading size={1} textColor="white" caps>React</Heading>
           <Layout>
             <Fill>
             <Image src={images.reactLogo.replace('/','')} width={400} height={400} />
@@ -413,20 +411,37 @@ export default class extends React.Component {
                 <Bullet>GraphQL</Bullet>
                 <Bullet>Relay</Bullet>
                 <Bullet>React hot loader</Bullet>
+                <Bullet>Bootstrap, Material, ...</Bullet>
                 <Bullet>Awesome React</Bullet>
                 <Bullet>...</Bullet>
               </BulletList>
             </Fill>
           </Layout>
         </Slide>
-        <Slide bgColor="primary">
-          <Heading size={1} textColor="#252525" caps>React Native</Heading>
+        <Slide bgColor="black">
+          <Heading size={1} textColor="white" caps>React Native</Heading>
+          <Layout>
+            <Fill>
+            <Image src={images.reactLogo.replace('/','')} width={400} height={400} />
+            </Fill>
+          </Layout>
         </Slide>
         <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>Universal apps</Heading>
+          <BulletList>
+            <Bullet>Le virtual DOM permet de se passer du navigateur</Bullet>
+            <Bullet>Possibilité de générer du HTML statique depuis un composant</Bullet>
+            <Bullet>Génération côté serveur</Bullet>
+          </BulletList>
         </Slide>
         <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>Webcomponents</Heading>
+          <BulletList>
+            <Bullet>Les WebComponents sont supportés en tant que feuille</Bullet>
+            <Bullet>Pas d'exposition possible en tant que WebComponent</Bullet>
+            <Bullet>L'équipe React travaille à une future intégration</Bullet>
+            <Bullet>En attendant diverses librairies existent</Bullet>
+          </BulletList>
         </Slide>
         <Slide bgColor="primary">
           <Reddit />
