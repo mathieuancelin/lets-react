@@ -48,132 +48,51 @@ const Styles = {
     textAlign: 'left',
   }
 };
-
-const TopBar = React.createClass({
-  getDefaultProps() {
-    return { read: [], stories: [] };
-  },
-  render() {
-    let stories = this.props.stories.filter(i => this.props.read.indexOf(i) < 0);
-    return (
-      <div style={Styles.top}>
-        <div style={Styles.unread}>
-          You have {stories.length} unread stories
-        </div>
-      </div>
-    );
-  }
-});
-
-const StoryCell = React.createClass({
-  select() {
-    this.props.select(this.props.story);
-  },
-  render() {
-    let style = {...Styles.story};
-    if (this.props.unread) {
-      style = {...style, ...{ fontWeight: 'bold' }};
-    } else {
-      style = {...style, ...{ color: 'lightgrey' }};
-    }
-    if (this.props.selected.id === this.props.story.id) {
-      style = {...style, ...{ backgroundColor: '#f9c300', color: 'black' }};
-    }
-    return (
-      <div style={style} onClick={this.select}>
-        <img src={this.props.story.thumbnail} width={60} height={60} />
-        <p style={{ marginLeft: 5 }}>{this.props.story.title.substring(0, 50)} {this.props.story.title.length > 50 ? '...' : ''}</p>
-      </div>
-    );
-  }
-});
-
-const Sidebar = React.createClass({
-  getDefaultProps() {
-    return { stories : [] };
-  },
-  render() {
-    return (
-      <div style={Styles.sidebar}>
-        {this.props.stories
-          .map(story => story.data)
-          .map(story => <StoryCell story={story} select={this.props.select} selected={this.props.selected} unread={this.props.read.indexOf(story.id) < 0} />)}
-      </div>
-    );
-  }
-});
-
-const Viewer = React.createClass({
-  render() {
-    if (this.props.story === null) {
-      return (
-        <div style={Styles.viewer}>
-          <h2>Nothing to read</h2>
-        </div>
-      );
-    } else {
-      let source = this.props.story.preview.images[0].source;
-      let ratio = 1.0;
-      if (source.height > source.width) {
-        ratio = maxHeight / source.height;
-      } else {
-        ratio = maxHeight / source.width;
-      }
-      return (
-        <div style={Styles.viewer}>
-          <h3>
-            UPS {this.props.story.ups} / DOWNS {this.props.story.downs}
-          </h3>
-          <img src={source.url} style={{ width: source.width * ratio, height: source.height * ratio }} />
-        </div>
-      );
-    }
-  }
-});
-
-const Reddit = React.createClass({
-  getInitialState() {
-    return {
-      stories: [],
-      read: [],
-      selected: null
-    };
-  },
-  getDefaultProps() {
-    return {
-      subreddit: 'funny'
-    };
-  },
-  componentDidMount() {
-    fetch(`http://www.reddit.com/r/${this.props.subreddit}.json?sort=top&t=month`).then((r) => r.json()).then((response) => {
-      let stories = response.data.children
-        .filter(item => !item.data.over_18)
-        .filter(item => item.data.url.indexOf('imgur.com') > -1)
-        .filter(item => item.data.preview.images && item.data.preview.images.length > 0);
-      let first = stories[0].data;
-      this.setState({ stories, selected: first, read: [first.id] });
+function fetchSubreddit(subreddit) {
+  return fetch(`http://www.reddit.com/r/${subreddit}.json?sort=top&t=month`).then((r) => r.json()).then((response) => {
+    return response.data.children
+      .filter(item => !item.data.over_18)
+      .filter(item => item.data.url.indexOf('imgur.com') > -1)
+      .filter(item => item.data.preview.images && item.data.preview.images.length > 0);
     });
-  },
-  select(selected) {
-    this.setState({ selected, read: [...this.state.read, selected.id] });
-  },
-  render() {
-    return (
-      <div style={Styles.container}>
-        <TopBar read={this.state.read} stories={this.state.stories.map(s => s.data.id)}/>
-        <div style={Styles.bottom}>
-          <Sidebar stories={this.state.stories} select={this.select} selected={this.state.selected} read={this.state.read} />
-          <Viewer story={this.state.selected}/>
-        </div>
-      </div>
-    );
+}
+function computeUnread(state) {
+  return state.stories.map(s => s.data.id).filter(i => state.read.indexOf(i) < 0).length;
+}
+function computeImageStyle(source) {
+  let ratio = 1.0;
+  if (source.height > source.width) {
+    ratio = maxHeight / source.height;
+  } else {
+    ratio = maxHeight / source.width;
   }
-});
+  return {
+    width: source.width * ratio,
+    height: source.height * ratio
+  };
+}
+function shrinkedTitle(story) {
+  return story.title.substring(0, 50) + (story.title.length > 50 ? '...' : '');
+}
+function computeCellStyle(props) {
+  let style = {...Styles.story};
+  if (props.unread) {
+    style = {...style, ...{ fontWeight: 'bold' }};
+  } else {
+    style = {...style, ...{ color: 'lightgrey' }};
+  }
+  if (props.selected.id === props.story.id) {
+    style = {...style, ...{ backgroundColor: '#f9c300', color: 'black' }};
+  }
+  return style;
+}
 
 export default React.createClass({
   render() {
     return (
-      <Reddit subreddit="pics" />
+      <div style={Styles.container}>
+        <h1>Hello JSC!</h1>
+      </div>
     );
   }
 });
