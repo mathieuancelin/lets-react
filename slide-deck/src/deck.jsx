@@ -58,6 +58,14 @@ class Deck extends React.Component {
     if (event.keyCode === 39 || event.keyCode === 34) {
       this._nextSlide();
     }
+    if (event.keyCode === 119 && !event.ctrlKey && !event.metaKey) { // o => f9
+      if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement) {
+        document.body.webkitRequestFullscreen();
+      } else {
+        console.log('cancel fs');
+        document.webkitCancelFullScreen();
+      }
+    }
     if (event.keyCode === 120 && !event.ctrlKey && !event.metaKey) { // o => f9
       this._toggleOverviewMode();
     }

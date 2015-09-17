@@ -91,9 +91,7 @@ function computeCellStyle(props) {
 export default React.createClass({
   render() {
     return (
-      <div style={Styles.container}>
-        <h1>Hello JSC!</h1>
-      </div>
+      <div style={Styles.container}><h1>Hello JSC</h1></div>
     );
   }
 });
