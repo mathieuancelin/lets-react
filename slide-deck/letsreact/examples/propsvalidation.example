@@ -9,6 +9,10 @@ const MyComponent = React.createClass({
     config: React.PropTypes.object,
     title: React.PropTypes.string,
     required: React.PropTypes.*.isRequired,
-    ...
   },
+  render() {
+    return (
+      <h1>Hello JSC!</h1>
+    );
+  }
 });

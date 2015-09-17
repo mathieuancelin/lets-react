@@ -105,7 +105,7 @@ const NiceClock = React.createClass({
 export default React.createClass({
   render() {
     return (
-      <div style={{ marginLeft: '40px' }}>
+      <div style={{ paddingLeft: 30, backgroundColor: 'white', width: 400 }}>
         <NiceClock />
       </div>
     );

@@ -1,7 +1,7 @@
 import React from 'react';
 
-const maxHeight = 300;
-const height = 500;
+const maxHeight = 200;
+const height = 300;
 const Styles = {
   container: {
     display: 'flex',

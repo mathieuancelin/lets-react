@@ -30,7 +30,7 @@ export default React.createClass({
   },
   render() {
     return (
-      <p style={{ fontSize: 30 }}>React has been running for {this.state.seconds} seconds</p>
+      <p style={{ fontSize: 30, backgroundColor: 'white', padding: 20 }}>React has been running for {this.state.seconds} seconds</p>
     );
   }
 });

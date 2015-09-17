@@ -23,7 +23,9 @@ const Style = {
   container: {
     display: 'flex',
     marginTop: 30,
-    fontSize: 24
+    fontSize: 24,
+    padding: 20,
+    backgroundColor: 'white'
   },
   button: {
     padding: 20,
@@ -51,7 +53,9 @@ const Style = {
 export default React.createClass({
   render() {
     return (
-      <span style={Style.label}>Hello JSC!</span>
+      <div style={Style.container}>
+        <span style={Style.label}>Hello JSC!</span>
+      </div>
     );
   }
 });

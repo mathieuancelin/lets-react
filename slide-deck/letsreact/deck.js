@@ -12,6 +12,7 @@ import Gallery from "./examples/gallery";
 import Clock from "./examples/clock";
 import FirstComponent from "./examples/firstcomponent";
 import Reddit from "./examples/reddit";
+import RedditLive from "./examples/redditlive";
 import MixinsExample from "./examples/mixins";
 import Hello from "./examples/hello";
 import HelloProps from "./examples/helloprops";
@@ -371,11 +372,13 @@ export default class extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Heading caps textColor="#252525">Validation</Heading>
-          <CodePane
+          {/*<CodePane
             textSize={28}
             lang="javascript"
             source={require("raw!./examples/propsvalidation.example")}
-            margin="20px auto" />
+            margin="20px auto" />*/}
+          <Editor file="letsreact/examples/propsvalidation.example" width="100%" height={500} collapse={false}/>
+
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
           <Heading size={1} textColor="#252525" caps>Mixins</Heading>
@@ -387,7 +390,7 @@ export default class extends React.Component {
         </Slide>*/}
         <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>Tests</Heading>
-          <Editor file="letsreact/examples/tests.example" width="100%" height={500}/>
+          <Editor file="letsreact/examples/tests.example" width="100%" height={500} collapse={false}/>
         </Slide>
         <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>Ecosystème</Heading>
@@ -425,7 +428,10 @@ export default class extends React.Component {
           <Heading size={1} textColor="#252525" caps>Webcomponents</Heading>
         </Slide>
         <Slide bgColor="primary">
-          <EditableComponent component={Reddit} file="letsreact/examples/reddit.js" />
+          <Reddit />
+        </Slide>
+        <Slide bgColor="primary">
+          <EditableComponent component={RedditLive} file="letsreact/examples/redditlive.js" />
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
           <EditableComponent component={Clock} file="letsreact/examples/clock.js" />

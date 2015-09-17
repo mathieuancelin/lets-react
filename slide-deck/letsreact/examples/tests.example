@@ -4,7 +4,7 @@ import Clicker from '../Clicker';
 jest.dontMock('../Clicker.js');
 
 describe('Clicker', () => {
-  it('changes count after click’, () => {
+  it('changes count after click', () => {
     const TestUtils = React.addons.TestUtils;
 
     const clicker = TestUtils.renderIntoDocument(<Clicker />);
