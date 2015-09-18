@@ -183,42 +183,7 @@ export default class extends React.Component {
             changées</Bullet>
           </BulletList>
         </Slide>
-        <Slide bgColor="primary" textColor="black" align="center top">
-          <Heading size={1} textColor="#252525" caps>Approche composant</Heading>
-          <BulletList>
-            <Bullet>Avec React, on fabrique des composants, pas des templates !!!</Bullet>
-            <Bullet>Les composants sont autonomes, réutilisables, composables et savent se rendre eux-même dans le DOM</Bullet>
-            <Bullet>Les composants sont des briques hautement cohésives et peu couplées avec les autres briques</Bullet>
-          </BulletList>
-        </Slide>
-        <Slide bgColor="primary" textColor="black" align="center top">
-          <Heading size={1} textColor="#252525" caps fit>Hello React</Heading>
-          <EditableComponent component={Hello} file="letsreact/examples/hello.js" />
-        </Slide>
-        <Slide bgColor="primary" textColor="black" align="center top">
-          <Image src={images.dafuq.replace('/','')} width="80%" height="80%" />
-        </Slide>
-        <Slide bgColor="primary" textColor="black" align="center top">
-          <Heading size={1} textColor="#252525" caps>JSX</Heading>
-          <BulletList>
-            <Bullet>Séparation des préoccupations ???</Bullet>
-            <Bullet tab={1}>la vue ne devrait pas être avec le « contrôleur / composant »</Bullet>
-            <Bullet>Ce n’est pas un problème de couplage mais de cohésion</Bullet>
-            <Bullet tab={1}>template fortement couplé au « viewModel »</Bullet>
-            <Bullet tab={1}>logique de rendu et markup inévitablement couplés</Bullet>
-            <Bullet>Séparation des technos, pas des préoccupations</Bullet>
-            <Bullet tab={1}>souvent limités, en plus ils faut les apprendre ;-)</Bullet>
-            <Bullet tab={2}>{'{{>}}, {{#each}}, [\'...\', \'...\'].join(\'\'), ng-*, etc …'}</Bullet>
-            <Bullet tab={1}>on en invente tous les jours ...</Bullet>
-          </BulletList>
-        </Slide>
-        <Slide bgColor="primary">
-          <Heading textColor="#252525" caps size={1} fit>Everything is a component</Heading>
-          <Heading caps size={2}>even the slides</Heading>
-          <Layout>
-            <Editor file="letsreact/deck.js" width="100%" height={500}/>
-          </Layout>
-        </Slide>
+
         <Slide bgColor="primary" textColor="black" align="center top">
           <Heading size={1} textColor="#252525" caps>Vues déclaratives</Heading>
           <Fill>
@@ -261,7 +226,7 @@ export default class extends React.Component {
             <Bullet>Applique les changements en batch dans le DOM</Bullet>
             <Bullet>Dans le cas du bouton favoris</Bullet>
             <Bullet tab={1}>Passer l’étoile en gris</Bullet>
-            <Bullet tab={2}>Changer le texte du label</Bullet>
+            <Bullet tab={1}>Changer le texte du label</Bullet>
             <Bullet tab={1}>Passer le texte en bleu</Bullet>
           </BulletList>
         </Slide>
@@ -307,6 +272,42 @@ export default class extends React.Component {
         */}
         <Slide bgColor="primary" textColor="black" align="center top">
           <iframe src="http://mathieuancelin.github.io/js-repaint-perfs/" frameBorder="0" style={{ marginTop: '50px', width: '1024px', height: '600px', backgroundColor: 'white' }}/>
+        </Slide>
+        <Slide bgColor="primary" textColor="black" align="center top">
+          <Heading size={1} textColor="#252525" caps>Approche composant</Heading>
+          <BulletList>
+            <Bullet>Avec React, on fabrique des composants, pas des templates !!!</Bullet>
+            <Bullet>Les composants sont autonomes, réutilisables, composables et savent se rendre eux-même dans le DOM</Bullet>
+            <Bullet>Les composants sont des briques hautement cohésives et peu couplées avec les autres briques</Bullet>
+          </BulletList>
+        </Slide>
+        <Slide bgColor="primary" textColor="black" align="center top">
+          <Heading size={1} textColor="#252525" caps fit>Hello React</Heading>
+          <EditableComponent component={Hello} file="letsreact/examples/hello.js" />
+        </Slide>
+        <Slide bgColor="primary" textColor="black" align="center top">
+          <Image src={images.dafuq.replace('/','')} width="80%" height="80%" />
+        </Slide>
+        <Slide bgColor="primary" textColor="black" align="center top">
+          <Heading size={1} textColor="#252525" caps>JSX</Heading>
+          <BulletList>
+            <Bullet>Séparation des préoccupations ???</Bullet>
+            <Bullet tab={1}>la vue ne devrait pas être avec le « contrôleur / composant »</Bullet>
+            <Bullet>Ce n’est pas un problème de couplage mais de cohésion</Bullet>
+            <Bullet tab={1}>template fortement couplé au « viewModel »</Bullet>
+            <Bullet tab={1}>logique de rendu et markup inévitablement couplés</Bullet>
+            <Bullet>Séparation des technos, pas des préoccupations</Bullet>
+            <Bullet tab={1}>souvent limités, en plus ils faut les apprendre ;-)</Bullet>
+            <Bullet tab={2}>{'{{>}}, {{#each}}, [\'...\', \'...\'].join(\'\'), ng-*, etc …'}</Bullet>
+            <Bullet tab={1}>on en invente tous les jours ...</Bullet>
+          </BulletList>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textColor="#252525" caps size={1} fit>Everything is a component</Heading>
+          <Heading caps size={2}>even the slides</Heading>
+          <Layout>
+            <Editor file="letsreact/deck.js" width="100%" height={500}/>
+          </Layout>
         </Slide>
         {/*<Slide bgColor="primary" textColor="black" align="center top">
           <Heading size={1} textColor="#252525" caps fit>Votre premier composant</Heading>
