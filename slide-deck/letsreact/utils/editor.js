@@ -47,7 +47,7 @@ export default React.createClass({
       height : '600px',
       width  : '100%',
       value  : '',
-      fontSize   : 14,
+      fontSize   : 18,
       showGutter : true,
       onChange   : onChange,
       onLoad     : null,
