@@ -389,6 +389,23 @@ export default class extends React.Component {
           <EditableComponent component={Clicker} file="letsreact/examples/clicker.js" />
         </Slide>*/}
         <Slide bgColor="primary">
+          <Heading size={1} textColor="#252525" caps>Universal apps</Heading>
+          <BulletList>
+            <Bullet>Le virtual DOM permet de se passer du navigateur</Bullet>
+            <Bullet>Possibilité de générer du HTML statique depuis un composant</Bullet>
+            <Bullet>Génération côté serveur</Bullet>
+          </BulletList>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading size={1} textColor="#252525" caps>Webcomponents</Heading>
+          <BulletList>
+            <Bullet>Les WebComponents sont supportés en tant que feuille</Bullet>
+            <Bullet>Pas d'exposition possible en tant que WebComponent</Bullet>
+            <Bullet>L'équipe React travaille à une future intégration</Bullet>
+            <Bullet>En attendant diverses librairies existent</Bullet>
+          </BulletList>
+        </Slide>
+        <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>Tests</Heading>
           <Editor file="letsreact/examples/tests.example" width="100%" height={500} collapse={false}/>
         </Slide>
@@ -426,23 +443,6 @@ export default class extends React.Component {
             <Image src={images.reactLogo.replace('/','')} width={400} height={400} />
             </Fill>
           </Layout>
-        </Slide>
-        <Slide bgColor="primary">
-          <Heading size={1} textColor="#252525" caps>Universal apps</Heading>
-          <BulletList>
-            <Bullet>Le virtual DOM permet de se passer du navigateur</Bullet>
-            <Bullet>Possibilité de générer du HTML statique depuis un composant</Bullet>
-            <Bullet>Génération côté serveur</Bullet>
-          </BulletList>
-        </Slide>
-        <Slide bgColor="primary">
-          <Heading size={1} textColor="#252525" caps>Webcomponents</Heading>
-          <BulletList>
-            <Bullet>Les WebComponents sont supportés en tant que feuille</Bullet>
-            <Bullet>Pas d'exposition possible en tant que WebComponent</Bullet>
-            <Bullet>L'équipe React travaille à une future intégration</Bullet>
-            <Bullet>En attendant diverses librairies existent</Bullet>
-          </BulletList>
         </Slide>
         <Slide bgColor="primary">
           <Reddit />
