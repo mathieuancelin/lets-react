@@ -7,6 +7,22 @@ const Style = {
   }
 };
 
+const HelloBackup = React.createClass({
+  getInitialState() {
+    return { value: '--' };
+  },
+  componentDidMount() {
+    setTimeout(() => this.setState({ value: Date.now() }), 2000);
+  },
+  render() {
+    return (
+      <div style={Style.container}>
+        <h1>Hello {this.state.value}!</h1>
+      </div>
+    );
+  }
+});
+
 const Hello = React.createClass({
   render() {
     return (
