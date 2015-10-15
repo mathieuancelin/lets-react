@@ -57,7 +57,7 @@ export default class extends React.Component {
   render() {
     return (
       <Deck transition={['slide']} transitionDuration={800}>
-        <Slide bgColor="primary" bgImage={images.jsc.replace("/", "")} bgDarken={0.01}>
+        <Slide bgColor="primary">
           <Heading size={1} textColor="#252525"    fit caps textColor="#1c6e8a">
             Let's React
           </Heading>
