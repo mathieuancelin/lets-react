@@ -270,8 +270,9 @@ export default class extends React.Component {
           </BulletList>
         </Slide>
         */}
-        <Slide bgColor="primary" textColor="black" align="center top">
-          <iframe src="http://mathieuancelin.github.io/js-repaint-perfs/" frameBorder="0" style={{ marginTop: '50px', width: '1024px', height: '600px', backgroundColor: 'white' }}/>
+        <Slide bgColor="#1C1C1C" textColor="black" align="center top">
+          <iframe src="http://mathieuancelin.github.io/js-repaint-perfs/"
+            frameBorder="0" style={{ marginTop: '50px', width: 856, height: 600, backgroundColor: 'white' }}/>
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
           <Heading size={1} textColor="#252525" caps>Approche composant</Heading>
