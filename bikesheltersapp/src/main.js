@@ -49,20 +49,13 @@ const LikerBackup = React.createClass({
 });
 
 const Liker = React.createClass({
-  getInitialState() {
-    return { likes: 0 };
-  },
-  like() {
-    this.setState({ likes: this.state.likes + 1 });
-  },
   render() {
     return (
       <View style={styles.container}>
-        <Text>Likes : {this.state.likes}</Text>
-        <Button action={this.like}>+1</Button>
+        <Text style={styles.label}>Hello BDX.IO</Text>
       </View>
     );
   }
 })
 
-AppRegistry.registerComponent('opendatapoitiers', () => opendatapoitiers);
+AppRegistry.registerComponent('opendatapoitiers', () => Liker);
