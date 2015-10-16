@@ -120,7 +120,7 @@ export default class extends React.Component {
             <Bullet tab={1}>rend des vues et répond à des évènements</Bullet>
             <Bullet tab={1}>le V de MVC ;-)</Bullet>
             <Bullet tab={1}>pas de full stack</Bullet>
-            <Bullet>Open source depuis Mai 2013</Bullet>
+            <Bullet>Créé en 2011 et open source depuis Mai 2013</Bullet>
             {/*<Bullet>Cible essentiellement les grosses applications JS avec des données qui changent dans le temps</Bullet>*/}
             <Bullet tab={1}>Facebook et applications tierces</Bullet>
             <Bullet tab={1}>Appli. web instagram</Bullet>
