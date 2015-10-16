@@ -58,7 +58,7 @@ export default class extends React.Component {
     return (
       <Deck transition={['slide']} transitionDuration={800}>
         <Slide bgColor="primary">
-          <Heading size={1} textColor="#252525"    fit caps textColor="#1c6e8a">
+          <Heading size={1} fit caps textColor="#1C1C1C">
             Let's React
           </Heading>
           <Heading size={4} fit caps>
