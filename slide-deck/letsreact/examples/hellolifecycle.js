@@ -27,7 +27,7 @@ const Hello = React.createClass({
   render() {
     return (
       <div style={Style.container}>
-        <h1>Hello JSC!</h1>
+        <h1>Hello BDX.IO!</h1>
       </div>
     );
   }
