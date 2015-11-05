@@ -37,3 +37,8 @@ React.render(
     <Route path="/:slide" component={Presentation} />
   </Router>
 , document.body);
+
+const img = document.createElement('img');
+img.setAttribute('src', '/devoxx.png');
+img.setAttribute('style', 'display: block; position: fixed; top: 0px; left: 0px; z-index: 99999; height: 100%');
+document.body.appendChild(img);
