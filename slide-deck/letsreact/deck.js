@@ -73,13 +73,13 @@ export default class extends React.Component {
             <Fill>
               <Layout size={4} textColor="secondary" bgColor="white" align="left top" margin={10}>
                 <BulletList>
-                  <Bullet>Développeur @SERLI</Bullet>
+                  <Bullet>Developper @SERLI</Bullet>
                   <Bullet>Scala, Java, JS, web & OSS</Bullet>
                   <Bullet tab={1}>ReactiveCouchbase</Bullet>
                   <Bullet tab={1}>Weld-OSGi</Bullet>
                   <Bullet tab={1}>etc ...</Bullet>
                   <Bullet>Poitou-Charentes JUG</Bullet>
-                  <Bullet>Expert group MVC 1.0</Bullet>
+                  <Bullet>MVC 1.0 expert group member</Bullet>
                   <Bullet>@TrevorReznik</Bullet>
                 </BulletList>
               </Layout>
@@ -96,12 +96,12 @@ export default class extends React.Component {
             Serli
           </Heading>
           <BulletList>
-            <Bullet>Société de conseil et d’ingénierie du SI</Bullet>
-            <Bullet>70 personnes</Bullet>
-            <Bullet>Java, Cloud, Mobilité</Bullet>
-            <Bullet>Contribution à des projets OSS</Bullet>
-            <Bullet>10% de la force de travail sur l’OSS</Bullet>
-            <Bullet>Membre du JCP </Bullet>
+            <Bullet>Small IT company based in France</Bullet>
+            <Bullet>around 70 people</Bullet>
+            <Bullet>Innovation, engineering, training, technology enthousiasts</Bullet>
+            <Bullet>OSS projects contribution</Bullet>
+            <Bullet>10% of workforce on OSS projects</Bullet>
+            <Bullet>JCP member</Bullet>
             <Bullet>www.serli.com @SerliFr</Bullet>
           </BulletList>
         </Slide>
@@ -116,19 +116,18 @@ export default class extends React.Component {
         <Slide bgColor="primary" textColor="black" align="center top">
           <Heading size={1} textColor="#252525" caps>React by Facebook</Heading>
           <BulletList>
-            <Bullet>Librairie Javascript pour créer des interfaces graphiques</Bullet>
-            <Bullet tab={1}>rend des vues et répond à des évènements</Bullet>
-            <Bullet tab={1}>le V de MVC ;-)</Bullet>
-            <Bullet tab={1}>pas de full stack</Bullet>
-            <Bullet>Créé en 2011 et open source depuis Mai 2013</Bullet>
-            {/*<Bullet>Cible essentiellement les grosses applications JS avec des données qui changent dans le temps</Bullet>*/}
-            <Bullet tab={1}>Facebook et applications tierces</Bullet>
-            <Bullet tab={1}>Appli. web instagram</Bullet>
-            <Bullet tab={1}>15000 composants en production</Bullet>
+            <Bullet>Javascript library to create UI</Bullet>
+            <Bullet tab={1}>render views and respond to events</Bullet>
+            <Bullet tab={1}>V in MVC ;-)</Bullet>
+            <Bullet tab={1}>no full stack</Bullet>
+            <Bullet>Created inf 2011 and open sourced in Mai 2013</Bullet>
+            <Bullet tab={1}>Facebook and other apps</Bullet>
+            <Bullet tab={1}>the whole Instagram webapp</Bullet>
+            <Bullet tab={1}>15000 components used in production</Bullet>
           </BulletList>
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
-          <Heading size={1} textColor="#252525" caps>Utilisateurs</Heading>
+          <Heading size={1} textColor="#252525" caps>React users</Heading>
           <Layout>
             <Fill>
               <BulletList>
@@ -166,7 +165,7 @@ export default class extends React.Component {
           </Layout>
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
-          <Heading size={1} textColor="#252525" caps>Déclaratif</Heading>
+          <Heading size={1} textColor="#252525" caps>Declarative</Heading>
           <BulletList>
             <Bullet>Exprimez à quoi doit ressembler votre app. à n’importe
             quel moment dans le temps</Bullet>
