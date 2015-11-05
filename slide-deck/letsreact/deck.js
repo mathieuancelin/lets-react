@@ -23,6 +23,7 @@ import EditableComponent from "./utils/editablecomponent";
 import Editor from "./utils/editor";
 
 const images = {
+  waiting: require("./images/waiting.png"),
   jsc: require("./images/background.png"),
   mathieu: require("./images/mathieu.jpg"),
   reactLogo: require("./images/react-logo.png"),
@@ -57,6 +58,7 @@ export default class extends React.Component {
   render() {
     return (
       <Deck transition={['slide']} transitionDuration={800}>
+        <Slide bgColor="primary" bgImage={images.waiting.replace('/', '')}></Slide>
         <Slide bgColor="primary">
           <Heading size={1} fit caps textColor="#1C1C1C">
             Let's React
