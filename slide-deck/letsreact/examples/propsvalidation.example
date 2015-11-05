@@ -12,7 +12,7 @@ const MyComponent = React.createClass({
   },
   render() {
     return (
-      <h1>Hello BDX.IO!</h1>
+      <h1>Hello DevFest!</h1>
     );
   }
 });
