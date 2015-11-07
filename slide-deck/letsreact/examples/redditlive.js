@@ -89,10 +89,109 @@ function computeCellStyle(props) {
   return style;
 }
 
+const TopBar = React.createClass({
+  getDefaultProps() {
+    return { unread: 0 };
+  },
+  render() {
+    return (
+      <div style={Styles.top}>
+        <div style={Styles.unread}>
+          You have {this.props.unread} unread stories !!!
+        </div>
+      </div>
+    );
+  }
+});
+
+const StoryCell = React.createClass({
+  selectSelf() {
+    this.props.select(this.props.story);
+  },
+  render() {
+    return (
+      <div style={computeCellStyle(this.props)} onClick={this.selectSelf}>
+        <img src={this.props.story.thumbnail} height={60} width={60} />
+        <p style={{ marginLeft: 5 }}>{shrinkedTitle(this.props.story)}</p>
+      </div>
+    );
+  }
+});
+
+const Sidebar = React.createClass({
+  render() {
+    return (
+      <div style={Styles.sidebar}>
+        {this.props.stories
+          .map(story => story.data)
+          .map(story => <StoryCell 
+            selected={this.props.selected}
+            select={this.props.select}
+            unread={this.props.read.indexOf(story.id) < 0}
+            story={story} />)
+        }
+      </div>
+    );
+  }
+});
+
+const Viewer = React.createClass({
+  render() {
+    if (this.props.story === null) {
+      return <div style={Styles.viewer}><h2>Nothing here !!!</h2></div>
+    }
+    const source = this.props.story.preview.images[0].source;
+    return (
+      <div style={Styles.viewer}>
+        <h2>UPS {this.props.story.ups} / DOWN {this.props.story.downs}</h2>
+        <img style={computeImageStyle(source)} src={source.url} />
+      </div>  
+    );
+  }
+});
+
+const Reddit = React.createClass({
+  getDefaultProps() {
+    return { subreddit: 'funny' };
+  },
+  getInitialState() {
+    return {
+      stories: [],
+      read: [],
+      selected: null
+    }
+  },
+  componentDidMount() {
+    fetchSubreddit(this.props.subreddit).then(stories => {
+      const first = stories[0].data;
+      this.setState({ stories, selected: first, read: [first.id] });
+    });
+  },
+  selectStory(selected) {
+    this.setState({ selected, read: [...this.state.read, selected.id] });
+  },
+  render() {
+    const unread = computeUnread(this.state);
+    return (
+      <div style={Styles.container}>
+      <TopBar unread={unread} />
+      <div style={Styles.bottom}>
+        <Sidebar 
+          selected={this.state.selected}
+          select={this.selectStory}
+          read={this.state.read}
+          stories={this.state.stories} />
+        <Viewer story={this.state.selected} />
+      </div>
+      </div>  
+    );
+  }
+});
+
 export default React.createClass({
   render() {
     return (
-      <div style={Styles.container}><h1>Hello DevFest</h1></div>
+      <Reddit subreddit="pics" />
     );
   }
 });

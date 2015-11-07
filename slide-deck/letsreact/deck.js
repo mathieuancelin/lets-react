@@ -307,9 +307,9 @@ export default class extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Heading textColor="#252525" caps size={1} fit>Everything is a component</Heading>
-          <Heading caps size={2}>even the slides</Heading>
+          <Heading caps size={2}>Hello world!</Heading>
           <Layout>
-            <Editor file="letsreact/deck.js" width="100%" height={500}/>
+            <h1>Je code du react dans des slides sur react avec react. React !!!!</h1>
           </Layout>
         </Slide>
         {/*<Slide bgColor="primary" textColor="black" align="center top">
