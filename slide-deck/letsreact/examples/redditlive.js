@@ -97,6 +97,14 @@ const Topbar = React.createClass({
   }
 });
 
+const StoryCell = React.createClass({
+  render() {
+    return (
+      <div>StoryCell</div>
+    );
+  }
+});
+
 const Sidebar = React.createClass({
   render() {
     return (
@@ -126,7 +134,7 @@ const Reddit = React.createClass({
   render() {
     return (
       <div style={Styles.container}>
-      
+
         <div style={Styles.bottom}>
 
         </div>
