@@ -73,7 +73,7 @@ export default class extends React.Component {
             <Fill>
               <Layout size={4} textColor="secondary" bgColor="white" align="left top" margin={10}>
                 <BulletList>
-                  <Bullet>Developper @SERLI</Bullet>
+                  <Bullet>Developper @SerliFr</Bullet>
                   <Bullet>Scala, Java, JS, web & OSS</Bullet>
                   <Bullet tab={1}>ReactiveCouchbase</Bullet>
                   <Bullet tab={1}>Weld-OSGi</Bullet>
@@ -90,20 +90,6 @@ export default class extends React.Component {
               </Layout>
             </Fill>
           </Layout>
-        </Slide>
-        <Slide bgColor="primary" textColor="black" align="center top">
-          <Heading size={1} textColor="#252525" caps>
-            Serli
-          </Heading>
-          <BulletList>
-            <Bullet>Small IT company based in France</Bullet>
-            <Bullet>around 70 people</Bullet>
-            <Bullet>Innovation, engineering, training, technology enthousiasts</Bullet>
-            <Bullet>OSS projects contribution</Bullet>
-            <Bullet>10% of workforce on OSS projects</Bullet>
-            <Bullet>JCP member</Bullet>
-            <Bullet>www.serli.com @SerliFr</Bullet>
-          </BulletList>
         </Slide>
         <Slide bgColor="secondary">
           <Heading size={1} textColor="white" caps>React</Heading>
@@ -124,73 +110,26 @@ export default class extends React.Component {
             <Bullet tab={1}>Facebook and other apps</Bullet>
             <Bullet tab={1}>the whole Instagram webapp</Bullet>
             <Bullet tab={1}>15000 components used in production</Bullet>
+            <Bullet tab={1}>Lot of users : Netflix, Coursera, Reddit, Yahoo, Hipchat ...</Bullet>
           </BulletList>
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
-          <Heading size={1} textColor="#252525" caps>React users</Heading>
-          <Layout>
-            <Fill>
-              <BulletList>
-                <Bullet>Netflix</Bullet>
-                <Bullet>Coursera</Bullet>
-                <Bullet>Github</Bullet>
-                <Bullet>reddit</Bullet>
-                <Bullet>Dropbox</Bullet>
-                <Bullet>Instagram</Bullet>
-                <Bullet>Facebook</Bullet>
-              </BulletList>
-            </Fill>
-            <Fill>
-              <BulletList>
-                <Bullet>asana</Bullet>
-                <Bullet>hipchat</Bullet>
-                <Bullet>airbnb</Bullet>
-                <Bullet>Quip</Bullet>
-                <Bullet>BBC</Bullet>
-                <Bullet>Custom Ink</Bullet>
-                <Bullet>expedia</Bullet>
-              </BulletList>
-            </Fill>
-            <Fill>
-              <BulletList>
-                <Bullet>Salesforces</Bullet>
-                <Bullet>Flipboard</Bullet>
-                <Bullet>Wired</Bullet>
-                <Bullet>Sony</Bullet>
-                <Bullet>Yahoo</Bullet>
-                <Bullet>Khan Academy</Bullet>
-                <Bullet>Rally Software</Bullet>
-              </BulletList>
-            </Fill>
-          </Layout>
-        </Slide>
-        <Slide bgColor="primary" textColor="black" align="center top">
-          <Heading size={1} textColor="#252525" caps>Declarative</Heading>
+          <Heading size={1} fit textColor="#252525" caps>Declarative and simple</Heading>
           <BulletList>
-            <Bullet>Exprimez à quoi doit ressembler votre app. à n’importe
-            quel moment dans le temps</Bullet>
-            <Bullet>React va automatiquement gérer toutes les mises à jour
-            de l’UI quand les données sous-jacentes sont modifiées.</Bullet>
+            <Bullet>Express what your view must look like at any point in time</Bullet>
+            <Bullet>Whenever your input data changes</Bullet>
+            <Bullet tab={1}>React re-render the whole view (F5)</Bullet>
+            <Bullet tab={1}>But actually update only changed parts in the DOM</Bullet>
           </BulletList>
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
-          <Heading size={1} textColor="#252525" caps>Simple</Heading>
-          <BulletList>
-            <Bullet>Quand vos données changent, conceptuellement,
-            React appuie sur F5 (la vue est entièrement re-rendue)</Bullet>
-            <Bullet>et sait mettre à jour que les parties de l’UI qui ont réellement
-            changées</Bullet>
-          </BulletList>
-        </Slide>
-
-        <Slide bgColor="primary" textColor="black" align="center top">
-          <Heading size={1} textColor="#252525" caps>Vues déclaratives</Heading>
+          <Heading size={1} textColor="#252525" fit caps>Declarative and simple</Heading>
           <Fill>
             <Image src={images.etoiles.replace('/','')}  />
           </Fill>
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
-          <Heading size={1} textColor="#252525" caps>Code impératif</Heading>
+          <Heading size={1} textColor="#252525" caps>Imperative code</Heading>
           <CodePane
             textSize={30}
             lang="javascript"
@@ -198,7 +137,7 @@ export default class extends React.Component {
             margin="20px auto" />
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
-          <Heading size={1} textColor="#252525" caps>Code déclaratif</Heading>
+          <Heading size={1} textColor="#252525" caps>Declarative code</Heading>
           <CodePane
             textSize={30}
             lang="javascript"
@@ -206,7 +145,7 @@ export default class extends React.Component {
             margin="20px auto" />
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
-          <Heading size={1} textColor="#252525" caps>Code déclaratif</Heading>
+        <Heading size={1} textColor="#252525" caps>Declarative code</Heading>
           <CodePane
             textSize={30}
             lang="javascript"
@@ -221,12 +160,12 @@ export default class extends React.Component {
         <Slide bgColor="primary" textColor="black" align="center top">
           <Heading size={1} textColor="#252525" caps>Virtual DOM</Heading>
           <BulletList>
-            <Bullet>React calcule la plus petite liste de changements possible à appliquer à la vue</Bullet>
-            <Bullet>Applique les changements en batch dans le DOM</Bullet>
-            <Bullet>Dans le cas du bouton favoris</Bullet>
-            <Bullet tab={1}>Passer l’étoile en gris</Bullet>
-            <Bullet tab={1}>Changer le texte du label</Bullet>
-            <Bullet tab={1}>Passer le texte en bleu</Bullet>
+            <Bullet>React computes the smallest list of changes to apply to the view</Bullet>
+            <Bullet>Batches all those changes in the DOM</Bullet>
+            <Bullet>For the favorite button</Bullet>
+            <Bullet tab={1}>Change image src to the grey one</Bullet>
+            <Bullet tab={1}>Change text</Bullet>
+            <Bullet tab={1}>Change the class of the label</Bullet>
           </BulletList>
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
@@ -244,63 +183,21 @@ export default class extends React.Component {
             </Appear>
           </Layout>
         </Slide>
-        {/*<Slide bgColor="primary" textColor="black" align="center top">
-          <Heading size={1} textColor="#252525" caps>Virtual DOM</Heading>
-          <BulletList>
-            <Bullet>React rend entièrement la vue à chaque changement de son modèle</Bullet>
-            <Bullet tab={1}>il très très compliqué de patcher la vue à la main quand les données changent en permanence => effets de bord</Bullet>
-            <Bullet>Pour que ce soit performance, React s’appuie sur un DOM virtuel</Bullet>
-            <Bullet tab={1}>React calcule la nouvelle vue</Bullet>
-            <Bullet tab={1}>React la compare avec l’ancienne</Bullet>
-            <Bullet tab={2}>calcule une liste de différences minimale</Bullet>
-            <Bullet tab={1}>React batch tous les changements nécessaires vers le DOM</Bullet>
-          </BulletList>
-        </Slide>*/}
-        {/*
-        <Slide bgColor="primary" textColor="black" align="center top">
-          <Heading size={1} textColor="#252525" caps>Synthetic events</Heading>
-          <BulletList>
-            <Bullet>React réimplémente un système d’évènement au dessus du DOM</Bullet>
-            <Bullet tab={1}>bubbleling</Bullet>
-            <Bullet tab={1}>Capture</Bullet>
-            <Bullet tab={1}>etc …</Bullet>
-            <Bullet>Conforme aux recommandations W3C</Bullet>
-            <Bullet>Fonctionne de manière identique sur tous les navigateurs</Bullet>
-          </BulletList>
-        </Slide>
-        */}
-        <Slide bgColor="#1C1C1C" textColor="black" align="center top">
+        {/*<Slide bgColor="#1C1C1C" textColor="black" align="center top">
           <iframe src="http://mathieuancelin.github.io/js-repaint-perfs/"
             frameBorder="0" style={{ marginTop: '50px', width: 856, height: 600, backgroundColor: 'white' }}/>
-        </Slide>
+        </Slide>*/}
         <Slide bgColor="primary" textColor="black" align="center top">
-          <Heading size={1} textColor="#252525" caps>Approche composant</Heading>
+          <Heading textColor="#252525" caps size={1} fit>Everything is a component</Heading>
           <BulletList>
-            <Bullet>Avec React, on fabrique des composants, pas des templates !!!</Bullet>
-            <Bullet>Les composants sont autonomes, réutilisables, composables et savent se rendre eux-même dans le DOM</Bullet>
-            <Bullet>Les composants sont des briques hautement cohésives et peu couplées avec les autres briques</Bullet>
+            <Bullet>With React you build components, no more templates</Bullet>
+            <Bullet>Components are autonomous, reusable, composable and can render themseleves in the DOM</Bullet>
+            <Bullet>Components are highly cohesive and losely coupled bricks</Bullet>
           </BulletList>
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
           <Heading size={1} textColor="#252525" caps fit>Hello React</Heading>
           <EditableComponent component={Hello} file="letsreact/examples/hello.js" />
-        </Slide>
-        <Slide bgColor="primary" textColor="black" align="center top">
-          <Image src={images.dafuq.replace('/','')} width="80%" height="80%" />
-        </Slide>
-        <Slide bgColor="primary" textColor="black" align="center top">
-          <Heading size={1} textColor="#252525" caps>JSX</Heading>
-          <BulletList>
-            <Bullet>Séparation des préoccupations ???</Bullet>
-            <Bullet tab={1}>la vue ne devrait pas être avec le « contrôleur / composant »</Bullet>
-            <Bullet>Ce n’est pas un problème de couplage mais de cohésion</Bullet>
-            <Bullet tab={1}>template fortement couplé au « viewModel »</Bullet>
-            <Bullet tab={1}>logique de rendu et markup inévitablement couplés</Bullet>
-            <Bullet>Séparation des technos, pas des préoccupations</Bullet>
-            <Bullet tab={1}>souvent limités, en plus ils faut les apprendre ;-)</Bullet>
-            <Bullet tab={2}>{'{{>}}, {{#each}}, [\'...\', \'...\'].join(\'\'), ng-*, etc …'}</Bullet>
-            <Bullet tab={1}>on en invente tous les jours ...</Bullet>
-          </BulletList>
         </Slide>
         <Slide bgColor="primary">
           <Heading textColor="#252525" caps size={1} fit>Everything is a component</Heading>
@@ -309,20 +206,16 @@ export default class extends React.Component {
             <Editor file="letsreact/deck.js" width="100%" height={500}/>
           </Layout>
         </Slide>
-        {/*<Slide bgColor="primary" textColor="black" align="center top">
-          <Heading size={1} textColor="#252525" caps fit>Votre premier composant</Heading>
-          <EditableComponent component={FirstComponent} file="letsreact/examples/firstcomponent.js" />
-        </Slide>*/}
         <Slide bgColor="primary" textColor="black" align="center top">
-          <Heading size={1} textColor="#252525" fit caps>Sources de données</Heading>
+          <Heading size={1} textColor="#252525" fit caps>Data sources</Heading>
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
           <Heading size={1} textColor="#252525" caps>Props</Heading>
           <BulletList>
-            <Bullet>Définies à la création d’une instance de composant</Bullet>
-            <Bullet tab={1}>Idéalement immutable</Bullet>
-            <Bullet>Peuvent avoir des valeurs par défaut pour faciliter la réutilisation</Bullet>
-            <Bullet>Peuvent être validées pour faciliter la réutilisation</Bullet>
+            <Bullet>Defined at component instanciation</Bullet>
+            <Bullet tab={1}>Ideally immutable</Bullet>
+            <Bullet>Can specify default values to ease reusability</Bullet>
+            <Bullet>Can be validated to ease reusability (types, value, etc ...)</Bullet>
           </BulletList>
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
@@ -332,10 +225,10 @@ export default class extends React.Component {
         <Slide bgColor="primary" textColor="black" align="center top">
           <Heading size={1} textColor="#252525" caps>State</Heading>
           <BulletList>
-            <Bullet>Représente l’état interne d’une instance de composant</Bullet>
-            <Bullet tab={1}>l’état est mutable, idéalement par le composant lui-même</Bullet>
-            <Bullet>Le changement de l’état lancera la mise à jour de la vue</Bullet>
-            <Bullet>Le double data binding est supporté mais non encouragé</Bullet>
+            <Bullet>The internal state of a component instance</Bullet>
+            <Bullet tab={1}>the state is mutable, ideally only by itself</Bullet>
+            <Bullet>Any mutation of the state will trigger view rendering</Bullet>
+            <Bullet>Two way databinding is possible but not encouraged</Bullet>
           </BulletList>
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
@@ -343,19 +236,7 @@ export default class extends React.Component {
           <EditableComponent component={FirstComponentJSX} file="letsreact/examples/firstcomponentjsx.js" />
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
-          <Heading size={1} textColor="#252525" caps>Context</Heading>
-          <BulletList>
-            <Bullet>Représente un object passé implicitement du parent aux enfant</Bullet>
-            <Bullet tab={1}>pas sujet au refresh d'interface</Bullet>
-            <Bullet>Necéssite de la validation pour pouvoir y accéder</Bullet>
-          </BulletList>
-        </Slide>
-        {/*<Slide bgColor="primary">
-          <Heading caps textColor="#252525">Context</Heading>
-          <EditableComponent component={Gallery} file="letsreact/examples/gallery.js" />
-        </Slide>*/}
-        <Slide bgColor="primary" textColor="black" align="center top">
-          <Heading size={1} textColor="#252525" caps>Cycle de vie</Heading>
+          <Heading size={1} textColor="#252525" caps>Lifecycle</Heading>
           <BulletList>
             <Bullet>componentWillMount</Bullet>
             <Bullet>componentDidMount</Bullet>
@@ -367,42 +248,16 @@ export default class extends React.Component {
           </BulletList>
         </Slide>
         <Slide bgColor="primary">
-          <Heading caps textColor="#252525">Cycle de vie</Heading>
+          <Heading size={1} textColor="#252525" caps>Lifecycle</Heading>
           <EditableComponent component={HelloLifecycle} file="letsreact/examples/hellolifecycle.js" />
-        </Slide>
-        <Slide bgColor="primary">
-          <Heading caps textColor="#252525">Validation</Heading>
-          {/*<CodePane
-            textSize={28}
-            lang="javascript"
-            source={require("raw!./examples/propsvalidation.example")}
-            margin="20px auto" />*/}
-          <Editor file="letsreact/examples/propsvalidation.example" width="100%" height={500} collapse={false}/>
-
-        </Slide>
-        <Slide bgColor="primary" textColor="black" align="center top">
-          <Heading size={1} textColor="#252525" caps>Mixins</Heading>
-          <EditableComponent component={MixinsExample} file="letsreact/examples/mixins.js" />
-        </Slide>
-        {/*<Slide bgColor="primary">
-          <Heading caps fit>The Clicker component</Heading>
-          <EditableComponent component={Clicker} file="letsreact/examples/clicker.js" />
-        </Slide>*/}
-        <Slide bgColor="primary">
-          <Heading size={1} textColor="#252525" caps>Universal apps</Heading>
-          <BulletList>
-            <Bullet>Le virtual DOM permet de se passer du navigateur</Bullet>
-            <Bullet>Possibilité de générer du HTML statique depuis un composant</Bullet>
-            <Bullet>Génération côté serveur</Bullet>
-          </BulletList>
         </Slide>
         <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>Webcomponents</Heading>
           <BulletList>
-            <Bullet>Les WebComponents sont supportés en tant que feuille</Bullet>
-            <Bullet>Pas d'exposition possible en tant que WebComponent</Bullet>
-            <Bullet>L'équipe React travaille à une future intégration</Bullet>
-            <Bullet>En attendant diverses librairies existent</Bullet>
+            <Bullet>WebComponents are supported as JSX leaves</Bullet>
+            <Bullet>You can't expose a React component as a WebComponent</Bullet>
+            <Bullet tab={1}>React team is working on such integration</Bullet>
+            <Bullet tab={1}>But you can use libs ;-)</Bullet>
           </BulletList>
         </Slide>
         <Slide bgColor="primary">
@@ -410,7 +265,7 @@ export default class extends React.Component {
           <Editor file="letsreact/examples/tests.example" width="100%" height={500} collapse={false}/>
         </Slide>
         <Slide bgColor="primary">
-          <Heading size={1} textColor="#252525" caps>Ecosystème</Heading>
+          <Heading size={1} textColor="#252525" caps>Ecosystem</Heading>
           <Layout>
             <Fill>
               <BulletList>
@@ -436,23 +291,15 @@ export default class extends React.Component {
             </Fill>
           </Layout>
         </Slide>
-        <Slide bgColor="black">
-          <Heading size={1} textColor="white" caps>React Native</Heading>
-          <Layout>
-            <Fill>
-            <Image src={images.reactLogo.replace('/','')} width={400} height={400} />
-            </Fill>
-          </Layout>
-        </Slide>
         <Slide bgColor="primary">
           <Reddit />
         </Slide>
         <Slide bgColor="primary">
           <EditableComponent component={RedditLive} file="letsreact/examples/redditlive.js" />
         </Slide>
-        <Slide bgColor="primary" textColor="black" align="center top">
+        {/*<Slide bgColor="primary" textColor="black" align="center top">
           <EditableComponent component={Clock} file="letsreact/examples/clock.js" />
-        </Slide>
+        </Slide>*/}
         <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>Conclusion</Heading>
         </Slide>
