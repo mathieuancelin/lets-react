@@ -106,7 +106,7 @@ export default class extends React.Component {
             <Bullet tab={1}>render views and respond to events</Bullet>
             <Bullet tab={1}>V in MVC ;-)</Bullet>
             <Bullet tab={1}>no full stack</Bullet>
-            <Bullet>Created inf 2011 and open sourced in Mai 2013</Bullet>
+            <Bullet>Created in 2011 and open sourced in 2013</Bullet>
             <Bullet tab={1}>Facebook and other apps</Bullet>
             <Bullet tab={1}>the whole Instagram webapp</Bullet>
             <Bullet tab={1}>15000 components used in production</Bullet>
