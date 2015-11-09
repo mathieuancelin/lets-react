@@ -50,7 +50,12 @@ const Styles = {
 };
 function fetchSubreddit(subreddit) {
   // return fetch(`http://localhost:3000/backupreddit/reddit.json`).then((r) => r.json()).then((response) => {
-  return fetch(`http://www.reddit.com/r/${subreddit}.json?sort=top&t=month`).then((r) => r.json()).then((response) => {
+  return fetch(`http://www.reddit.com/r/${subreddit}.json?sort=top&t=month`)
+      .catch(e => {
+        console.log('CORS error, loading local version');
+        return fetch(`http://localhost:3000/backupreddit/${subreddit}.json`)
+      })
+      .then((r) => r.json()).then((response) => {
     return response.data.children
       .filter(item => !item.data.over_18)
       .filter(item => item.data.url.indexOf('imgur.com') > -1)
