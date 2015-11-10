@@ -73,7 +73,7 @@ export default class extends React.Component {
             <Fill>
               <Layout size={4} textColor="secondary" bgColor="white" align="left top" margin={10}>
                 <BulletList>
-                  <Bullet>Developper @SerliFr</Bullet>
+                  <Bullet>Developer @SerliFr</Bullet>
                   <Bullet>Scala, Java, JS, web & OSS</Bullet>
                   <Bullet tab={1}>ReactiveCouchbase</Bullet>
                   <Bullet tab={1}>Weld-OSGi</Bullet>
