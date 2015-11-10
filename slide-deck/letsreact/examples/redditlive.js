@@ -49,6 +49,7 @@ const Styles = {
   }
 };
 function fetchSubreddit(subreddit) {
+  // onClick setState props thumbnail preview 
   // return fetch(`http://localhost:3000/backupreddit/reddit.json`).then((r) => r.json()).then((response) => {
   return fetch(`http://www.reddit.com/r/${subreddit}.json?sort=top&t=month`)
       .catch(e => {
