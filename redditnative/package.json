@@ -1,0 +1,13 @@
+{
+  "name": "redditnative",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start-ios": "node node_modules/react-native/local-cli/cli.js start hot --root ./src/es5",
+    "start-android": "node node_modules/react-native/local-cli/cli.js run-android hot"
+  },
+  "dependencies": {
+    "react-native": "^0.18.0",
+    "react-native-gestures": "^0.2.0"
+  }
+}
