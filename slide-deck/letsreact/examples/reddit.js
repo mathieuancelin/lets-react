@@ -40,6 +40,7 @@ const Styles = {
     padding: '10px 20px 10px 20px'
   },
   story: {
+    minHeight: 67,
     display: 'flex',
     alignItems: 'center',
     width: '100%',
