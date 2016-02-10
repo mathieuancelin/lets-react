@@ -32,7 +32,7 @@ export const SubReddit = React.createClass({
   },
   renderStories(item) {
     return(
-      <StoryCell onSelect={() => this.selectStory(item)} nbr={''} story={item}/>
+      <StoryCell onSelect={() => this.selectStory(item)} story={item}/>
     );
   },
   selectStory(item) {

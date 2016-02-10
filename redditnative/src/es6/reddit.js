@@ -32,7 +32,7 @@ export const Reddit = React.createClass({
   },
   renderSubReddit(item) {
     return(
-      <SubRedditCell onSelect={() => this.selectSubReddit(item)} nbr={''} subreddit={item}/>
+      <SubRedditCell onSelect={() => this.selectSubReddit(item)} subreddit={item}/>
     );
   },
   selectSubReddit(item) {
