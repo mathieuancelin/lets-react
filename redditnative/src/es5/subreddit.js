@@ -32,27 +32,21 @@ var SubReddit = exports.SubReddit = _reactNative2.default.createClass({
     };
   },
   componentDidMount: function componentDidMount() {
-    var _this = this;
-
-    (0, _utils.fetchSubreddit)(this.props.display_name).then(function (data) {
-      _this.setState({
-        dataSource: _this.state.dataSource.cloneWithRows(data),
-        loaded: true
-      });
-    }).done();
+    // TODO : load subreddit stories
   },
   render: function render() {
-    if (!this.state.loaded) {
-      return _reactNative2.default.createElement(_loading.Loading, { what: 'stories' });
-    }
-    return _reactNative2.default.createElement(_reactNative.ListView, { style: { marginTop: 40 }, dataSource: this.state.dataSource, renderRow: this.renderStories });
+    // TODO : loading page
+    return _reactNative2.default.createElement(_reactNative.ListView, {
+      style: { marginTop: 40 },
+      dataSource: this.state.dataSource,
+      renderRow: this.renderStories });
   },
   renderStories: function renderStories(item) {
-    var _this2 = this;
+    var _this = this;
 
     return _reactNative2.default.createElement(_storycell.StoryCell, { onSelect: function onSelect() {
-        return _this2.selectStory(item);
-      }, nbr: '', story: item });
+        return _this.selectStory(item);
+      }, story: item });
   },
   selectStory: function selectStory(item) {
     var _item$data$preview$im = item.data.preview.images[0].source;

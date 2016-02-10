@@ -1,12 +1,16 @@
-import React, { NavigatorIOS, TabBarIOS } from 'react-native';
+import React, { NavigatorIOS, TabBarIOS, Text, View } from 'react-native';
 import { styles } from './style';
 import { Reddit } from './reddit';
 
 export const redditnative = React.createClass({
   render() {
+    // TODO : render the navigator
     return (
-      <NavigatorIOS style = {styles.navigatorios}
-        initialRoute = {{ title: 'subreddits', component: Reddit }} />
+      <View style={styles.container}>
+        <Text style={styles.welcome}>
+          Hello Bordeaux JUG !!!
+        </Text>
+      </View>
     );
   }
 });

@@ -13,21 +13,15 @@ export const Reddit = React.createClass({
     };
   },
   componentDidMount() {
-    fetchSubreddits().then(data => {
-      this.setState({
-        dataSource: this.state.dataSource.cloneWithRows(data),
-        loaded: true
-      });
-    }).done();
+    // TODO : load subreddits
   },
   render() {
-    if (!this.state.loaded) {
-      return(
-        <Loading what="subreddits stuff" />
-      );
-    }
+    // TODO : laading page
     return (
-      <ListView style={{ marginTop: 40 }} dataSource={this.state.dataSource} renderRow={this.renderSubReddit} />
+      <ListView
+          style={{ marginTop: 40 }}
+          dataSource={this.state.dataSource}
+          renderRow={this.renderSubReddit} />
     );
   },
   renderSubReddit(item) {
@@ -36,13 +30,7 @@ export const Reddit = React.createClass({
     );
   },
   selectSubReddit(item) {
-    this.props.navigator.push({
-      title: item.data.title,
-      component: SubReddit,
-      passProps: {
-        display_name: item.data.display_name
-      }
-    });
+    // TODO : handle subreddit selection, navigate to subreddit
   }
 });
 

@@ -18,8 +18,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var redditnative = exports.redditnative = _reactNative2.default.createClass({
   displayName: 'redditnative',
   render: function render() {
-    return _reactNative2.default.createElement(_reactNative.NavigatorIOS, { style: _style.styles.navigatorios,
-      initialRoute: { title: 'subreddits', component: _reddit.Reddit } });
+    // TODO : render the navigator
+    return _reactNative2.default.createElement(
+      _reactNative.View,
+      { style: _style.styles.container },
+      _reactNative2.default.createElement(
+        _reactNative.Text,
+        { style: _style.styles.welcome },
+        'Hello Bordeaux JUG !!!'
+      )
+    );
   }
 });
 

@@ -32,36 +32,24 @@ var Reddit = exports.Reddit = _reactNative2.default.createClass({
     };
   },
   componentDidMount: function componentDidMount() {
-    var _this = this;
-
-    (0, _utils.fetchSubreddits)().then(function (data) {
-      _this.setState({
-        dataSource: _this.state.dataSource.cloneWithRows(data),
-        loaded: true
-      });
-    }).done();
+    // TODO : load subreddits
   },
   render: function render() {
-    if (!this.state.loaded) {
-      return _reactNative2.default.createElement(_loading.Loading, { what: 'subreddits stuff' });
-    }
-    return _reactNative2.default.createElement(_reactNative.ListView, { style: { marginTop: 40 }, dataSource: this.state.dataSource, renderRow: this.renderSubReddit });
+    // TODO : laading page
+    return _reactNative2.default.createElement(_reactNative.ListView, {
+      style: { marginTop: 40 },
+      dataSource: this.state.dataSource,
+      renderRow: this.renderSubReddit });
   },
   renderSubReddit: function renderSubReddit(item) {
-    var _this2 = this;
+    var _this = this;
 
     return _reactNative2.default.createElement(_subredditcell.SubRedditCell, { onSelect: function onSelect() {
-        return _this2.selectSubReddit(item);
-      }, nbr: '', subreddit: item });
+        return _this.selectSubReddit(item);
+      }, subreddit: item });
   },
   selectSubReddit: function selectSubReddit(item) {
-    this.props.navigator.push({
-      title: item.data.title,
-      component: _subreddit.SubReddit,
-      passProps: {
-        display_name: item.data.display_name
-      }
-    });
+    // TODO : handle subreddit selection, navigate to subreddit
   }
 });
 

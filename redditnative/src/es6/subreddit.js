@@ -13,21 +13,15 @@ export const SubReddit = React.createClass({
     };
   },
   componentDidMount() {
-    fetchSubreddit(this.props.display_name).then(data => {
-      this.setState({
-        dataSource: this.state.dataSource.cloneWithRows(data),
-        loaded: true
-      });
-    }).done();
+    // TODO : load subreddit stories
   },
   render() {
-    if (!this.state.loaded) {
-      return(
-        <Loading what="stories" />
-      );
-    }
+    // TODO : loading page
     return (
-      <ListView style={{ marginTop: 40 }} dataSource={this.state.dataSource} renderRow={this.renderStories} />
+      <ListView
+          style={{ marginTop: 40 }}
+          dataSource={this.state.dataSource}
+          renderRow={this.renderStories} />
     );
   },
   renderStories(item) {
