@@ -50,7 +50,8 @@ const Styles = {
   }
 };
 function fetchSubreddit(subreddit) {
-  // onClick setState props thumbnail preview componentDidMount selectSelf select
+  // onClick getDefaultProps getInitialState setState props
+  // thumbnail preview componentDidMount selectSelf select unread
   // return fetch(`http://localhost:3000/backupreddit/reddit.json`).then((r) => r.json()).then((response) => {
   return fetch(`http://www.reddit.com/r/${subreddit}.json?sort=top&t=month`).then((r) => r.json()).then((response) => {
     return response.data.children
