@@ -13,10 +13,10 @@ export const Reddit = React.createClass({
     };
   },
   componentDidMount() {
-    // TODO : load subreddits
+    // TODO : load subreddits 2
   },
   render() {
-    // TODO : laading page
+    // TODO : loading page 1
     return (
       <ListView
           style={{ marginTop: 40 }}
@@ -30,7 +30,7 @@ export const Reddit = React.createClass({
     );
   },
   selectSubReddit(item) {
-    // TODO : handle subreddit selection, navigate to subreddit
+    // TODO : handle subreddit selection, navigate to subreddit 3
   }
 });
 

@@ -2,7 +2,7 @@ import React, { Image, Text, TouchableHighlight, View } from 'react-native';
 import { styles } from './style';
 
 export const StoryCell = React.createClass({
-  // TODO : display thumnail
+  // TODO : display thumbnail
   render() {
     return (
       <TouchableHighlight onPress={this.props.onSelect}>

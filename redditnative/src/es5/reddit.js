@@ -32,10 +32,10 @@ var Reddit = exports.Reddit = _reactNative2.default.createClass({
     };
   },
   componentDidMount: function componentDidMount() {
-    // TODO : load subreddits
+    // TODO : load subreddits 2
   },
   render: function render() {
-    // TODO : laading page
+    // TODO : loading page 1
     return _reactNative2.default.createElement(_reactNative.ListView, {
       style: { marginTop: 40 },
       dataSource: this.state.dataSource,
@@ -49,7 +49,7 @@ var Reddit = exports.Reddit = _reactNative2.default.createClass({
       }, subreddit: item });
   },
   selectSubReddit: function selectSubReddit(item) {
-    // TODO : handle subreddit selection, navigate to subreddit
+    // TODO : handle subreddit selection, navigate to subreddit 3
   }
 });
 

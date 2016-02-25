@@ -16,7 +16,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var StoryCell = exports.StoryCell = _reactNative2.default.createClass({
   displayName: 'StoryCell',
 
-  // TODO : display thumnail
+  // TODO : display thumbnail
   render: function render() {
     return _reactNative2.default.createElement(
       _reactNative.TouchableHighlight,
