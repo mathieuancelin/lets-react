@@ -8,7 +8,7 @@ export const redditnative = React.createClass({
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Hello Bordeaux JUG !!!
+          Hello Nantes JUG !!!
         </Text>
       </View>
     );

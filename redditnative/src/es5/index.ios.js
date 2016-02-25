@@ -25,7 +25,7 @@ var redditnative = exports.redditnative = _reactNative2.default.createClass({
       _reactNative2.default.createElement(
         _reactNative.Text,
         { style: _style.styles.welcome },
-        'Hello Bordeaux JUG !!!'
+        'Hello Nantes JUG !!!'
       )
     );
   }
