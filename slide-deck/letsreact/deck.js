@@ -91,7 +91,7 @@ export default class extends React.Component {
             </Fill>
           </Layout>
         </Slide>
-        <Slide bgColor="primary" textColor="black" align="center top">
+        {/*<Slide bgColor="primary" textColor="black" align="center top">
           <Heading size={1} textColor="#252525" caps>
             Serli
           </Heading>
@@ -104,7 +104,7 @@ export default class extends React.Component {
             <Bullet>Membre du JCP </Bullet>
             <Bullet>www.serli.com @SerliFr</Bullet>
           </BulletList>
-        </Slide>
+        </Slide>*/}
         <Slide bgColor="secondary">
           <Heading size={1} textColor="white" caps>React</Heading>
           <Layout>
@@ -437,6 +437,15 @@ export default class extends React.Component {
             </Fill>
           </Layout>
         </Slide>
+        <Slide bgColor="primary">
+          <Reddit />
+        </Slide>
+        <Slide bgColor="primary">
+          <EditableComponent component={RedditLive} file="letsreact/examples/redditlive.js" />
+        </Slide>
+        <Slide bgColor="primary" textColor="black" align="center top">
+          <EditableComponent component={Clock} file="letsreact/examples/clock.js" />
+        </Slide>
         <Slide bgColor="black">
           <Heading size={1} textColor="white" caps>React Native</Heading>
           <Layout>
@@ -446,13 +455,45 @@ export default class extends React.Component {
           </Layout>
         </Slide>
         <Slide bgColor="primary">
-          <Reddit />
+          <Heading size={1} textColor="#252525" caps>Applications mobile</Heading>
+          <BulletList>
+            <Bullet>Native</Bullet>
+            <Bullet>Web view (PhoneGap, Cordova, etc …)</Bullet>
+            <Bullet>Compile to native (Xamarin, etc …)</Bullet>
+            <Bullet>Moteur JS (NativeScript, Appcelerator Titanium)</Bullet>
+          </BulletList>
         </Slide>
         <Slide bgColor="primary">
-          <EditableComponent component={RedditLive} file="letsreact/examples/redditlive.js" />
+          <Heading size={1} textColor="#252525" caps>React Native</Heading>
+          <BulletList>
+            <Bullet>Framework pour développer des apps. natives</Bullet>
+            <Bullet>Basé sur JS et la librairie React</Bullet>
+            <Bullet>N’est pas une plateforme hybride</Bullet>
+            <Bullet>N’est pas une réécriture de composants natifs</Bullet>
+            <Bullet>N’est pas un « transpiler »</Bullet>
+            <Bullet>Permet de scripter des composants natifs en JS</Bullet>
+          </BulletList>
         </Slide>
-        <Slide bgColor="primary" textColor="black" align="center top">
-          <EditableComponent component={Clock} file="letsreact/examples/clock.js" />
+        <Slide bgColor="primary">
+          <Heading size={1} textColor="#252525" caps>React Native n’est pas une webview !!!</Heading>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading size={1} textColor="#252525" caps>React Native</Heading>
+          <BulletList>
+            <Bullet>DX semblable au web</Bullet>
+            <Bullet tab={1}>hot reload, écosystème JS (npm, webpack, etc …)</Bullet>
+            <Bullet>MAJ en ligne ;-)</Bullet>
+            <Bullet>Système de bridge natif pour créer des modules ou des composants utilisables depuis le JS</Bullet>
+            <Bullet>Possibilité d’intégration dans une application classique</Bullet>
+            <Bullet>Toute l’équipe peut s’occuper de l’application mobile</Bullet>
+            <Bullet tab={1}>il est toutefois judicieux de garder des spécialistes</Bullet>
+          </BulletList>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading size={1} textColor="#252525" caps>Learn once write anywhere</Heading>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading size={1} textColor="#252525" caps>Démo</Heading>
         </Slide>
         <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>Conclusion</Heading>
