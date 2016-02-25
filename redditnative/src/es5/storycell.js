@@ -24,6 +24,7 @@ var StoryCell = exports.StoryCell = _reactNative2.default.createClass({
       _reactNative2.default.createElement(
         _reactNative.View,
         { style: _style.styles.container },
+        _reactNative2.default.createElement(_reactNative.Image, { style: _style.styles.thumbnail, source: { uri: this.props.story.data.thumbnail } }),
         _reactNative2.default.createElement(
           _reactNative.Text,
           { style: _style.styles.subredditTitle },

@@ -17,12 +17,23 @@ const Style = {
   }
 };
 
+const Hello = React.createClass({
+  render() {
+    return (
+      <div style={Style.container} onClick={() => this.forceUpdate()}>
+        <h1>Hello {Date.now()}!</h1>
+      </div>
+    );
+  }
+});
+
 export default React.createClass({
   render() {
     return (
-      <div style={Style.container}>
-        <h1>Hello Bordeaux JUG!</h1>
-      </div>
+      React.createElement('div', null, 
+        React.createElement(Hello, null),
+        React.createElement(Hello, null),
+      )
     );
   }
 });

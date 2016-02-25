@@ -1,4 +1,4 @@
-import React, { Text, TouchableHighlight, View } from 'react-native';
+import React, { Image, Text, TouchableHighlight, View } from 'react-native';
 import { styles } from './style';
 
 export const SubRedditCell = React.createClass({
