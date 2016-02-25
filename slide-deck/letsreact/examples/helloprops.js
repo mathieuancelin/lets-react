@@ -3,7 +3,7 @@ import React from 'react';
 const HelloWhoBackup = React.createClass({
   getDefaultProps() {
     return {
-      who: 'Bordeaux JUG'
+      who: 'Nantes JUG'
     };
   },
   render() {
@@ -31,7 +31,7 @@ export default React.createClass({
   render() {
     return (
       <div style={Style.container}>
-        <h1>Hello Bordeaux JUG!</h1>
+        <h1>Hello Nantes JUG!</h1>
       </div>
     );
   }

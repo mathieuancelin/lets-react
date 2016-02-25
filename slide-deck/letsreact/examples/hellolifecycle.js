@@ -27,7 +27,7 @@ const Hello = React.createClass({
   render() {
     return (
       <div style={Style.container}>
-        <h1>Hello Bordeaux JUG!</h1>
+        <h1>Hello Nantes JUG!</h1>
       </div>
     );
   }
