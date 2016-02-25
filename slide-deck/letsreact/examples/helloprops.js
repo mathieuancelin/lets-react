@@ -27,12 +27,28 @@ const Style = {
   }
 };
 
-export default React.createClass({
+const Hello = React.createClass({
+  getDefaultProps() {
+    return { who: 'World' };
+  },
   render() {
     return (
       <div style={Style.container}>
-        <h1>Hello Nantes JUG!</h1>
+        <h1>Hello {this.props.who}!</h1>
+        <ul>{this.props.children}</ul>
       </div>
+    );
+  }
+});
+
+export default React.createClass({
+  render() {
+    return (
+      <Hello who="Mathieu">
+        <li>Java</li>
+        <li>Javascript</li>
+        <li>Scala</li>
+      </Hello>
     );
   }
 });

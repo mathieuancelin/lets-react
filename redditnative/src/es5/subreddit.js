@@ -32,20 +32,29 @@ var SubReddit = exports.SubReddit = _reactNative2.default.createClass({
     };
   },
   componentDidMount: function componentDidMount() {
-    // TODO : load subreddit stories
+    var _this = this;
+
+    (0, _utils.fetchSubreddit)(this.props.display_name).then(function (data) {
+      _this.setState({
+        loaded: true,
+        dataSource: _this.state.dataSource.cloneWithRows(data)
+      });
+    });
   },
   render: function render() {
-    // TODO : loading page
+    if (!this.state.loaded) {
+      return _reactNative2.default.createElement(_loading.Loading, { what: this.props.display_name });
+    }
     return _reactNative2.default.createElement(_reactNative.ListView, {
       style: { marginTop: 40 },
       dataSource: this.state.dataSource,
       renderRow: this.renderStories });
   },
   renderStories: function renderStories(item) {
-    var _this = this;
+    var _this2 = this;
 
     return _reactNative2.default.createElement(_storycell.StoryCell, { onSelect: function onSelect() {
-        return _this.selectStory(item);
+        return _this2.selectStory(item);
       }, story: item });
   },
   selectStory: function selectStory(item) {
