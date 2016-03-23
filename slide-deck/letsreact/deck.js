@@ -32,6 +32,7 @@ const images = {
   trees: require("./images/trees.png"),
   treeBefore: require("./images/tree-before.png"),
   treeAfter: require("./images/tree-after.png"),
+  rn: require("./images/rn.png"),
 };
 
 const BulletList = React.createClass({
@@ -125,62 +126,17 @@ export default class extends React.Component {
             <Bullet tab={1}>Facebook et applications tierces</Bullet>
             <Bullet tab={1}>Appli. web instagram</Bullet>
             <Bullet tab={1}>15000 composants en production</Bullet>
+            <Bullet tab={1}>Beaucoup d'utilisateurs : Netflix, Coursera, reddit, hipchat, yahoo</Bullet>
           </BulletList>
-        </Slide>
-        <Slide bgColor="primary" textColor="black" align="center top">
-          <Heading size={1} textColor="#252525" caps>Utilisateurs</Heading>
-          <Layout>
-            <Fill>
-              <BulletList>
-                <Bullet>Netflix</Bullet>
-                <Bullet>Coursera</Bullet>
-                <Bullet>Github</Bullet>
-                <Bullet>reddit</Bullet>
-                <Bullet>Dropbox</Bullet>
-                <Bullet>Instagram</Bullet>
-                <Bullet>Facebook</Bullet>
-              </BulletList>
-            </Fill>
-            <Fill>
-              <BulletList>
-                <Bullet>asana</Bullet>
-                <Bullet>hipchat</Bullet>
-                <Bullet>airbnb</Bullet>
-                <Bullet>Quip</Bullet>
-                <Bullet>BBC</Bullet>
-                <Bullet>Custom Ink</Bullet>
-                <Bullet>expedia</Bullet>
-              </BulletList>
-            </Fill>
-            <Fill>
-              <BulletList>
-                <Bullet>Salesforces</Bullet>
-                <Bullet>Flipboard</Bullet>
-                <Bullet>Wired</Bullet>
-                <Bullet>Sony</Bullet>
-                <Bullet>Yahoo</Bullet>
-                <Bullet>Khan Academy</Bullet>
-                <Bullet>Rally Software</Bullet>
-              </BulletList>
-            </Fill>
-          </Layout>
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
           <Heading size={1} textColor="#252525" caps>Déclaratif</Heading>
           <BulletList>
             <Bullet>Exprimez à quoi doit ressembler votre app. à n’importe
             quel moment dans le temps</Bullet>
-            <Bullet>React va automatiquement gérer toutes les mises à jour
-            de l’UI quand les données sous-jacentes sont modifiées.</Bullet>
-          </BulletList>
-        </Slide>
-        <Slide bgColor="primary" textColor="black" align="center top">
-          <Heading size={1} textColor="#252525" caps>Simple</Heading>
-          <BulletList>
-            <Bullet>Quand vos données changent, conceptuellement,
-            React appuie sur F5 (la vue est entièrement re-rendue)</Bullet>
-            <Bullet>et sait mettre à jour que les parties de l’UI qui ont réellement
-            changées</Bullet>
+            <Bullet>Dès que les données en entrée changent</Bullet>
+            <Bullet tab={1}>React va re-rendre entièrement la vue (F5)</Bullet>
+            <Bullet tab={1}>Mais n'actualise que les parties qui ont vraiment changées dans le DOM</Bullet>
           </BulletList>
         </Slide>
 
@@ -286,7 +242,7 @@ export default class extends React.Component {
           <Heading size={1} textColor="#252525" caps fit>Hello React</Heading>
           <EditableComponent component={Hello} file="letsreact/examples/hello.js" />
         </Slide>
-        <Slide bgColor="primary" textColor="black" align="center top">
+        {/*<Slide bgColor="primary" textColor="black" align="center top">
           <Image src={images.dafuq.replace('/','')} width="80%" height="80%" />
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
@@ -302,7 +258,7 @@ export default class extends React.Component {
             <Bullet tab={2}>{'{{>}}, {{#each}}, [\'...\', \'...\'].join(\'\'), ng-*, etc …'}</Bullet>
             <Bullet tab={1}>on en invente tous les jours ...</Bullet>
           </BulletList>
-        </Slide>
+        </Slide>*/}
         <Slide bgColor="primary">
           <Heading textColor="#252525" caps size={1} fit>Everything is a component</Heading>
           <Heading caps size={2}>even the slides</Heading>
@@ -381,14 +337,14 @@ export default class extends React.Component {
           <Editor file="letsreact/examples/propsvalidation.example" width="100%" height={500} collapse={false}/>
 
         </Slide>
-        <Slide bgColor="primary" textColor="black" align="center top">
+        {/*<Slide bgColor="primary" textColor="black" align="center top">
           <Heading size={1} textColor="#252525" caps>Mixins</Heading>
           <EditableComponent component={MixinsExample} file="letsreact/examples/mixins.js" />
         </Slide>
-        {/*<Slide bgColor="primary">
+        <Slide bgColor="primary">
           <Heading caps fit>The Clicker component</Heading>
           <EditableComponent component={Clicker} file="letsreact/examples/clicker.js" />
-        </Slide>*/}
+        </Slide>
         <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>Universal apps</Heading>
           <BulletList>
@@ -396,14 +352,14 @@ export default class extends React.Component {
             <Bullet>Possibilité de générer du HTML statique depuis un composant</Bullet>
             <Bullet>Génération côté serveur</Bullet>
           </BulletList>
-        </Slide>
+        </Slide>*/}
         <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>Webcomponents</Heading>
           <BulletList>
             <Bullet>Les WebComponents sont supportés en tant que feuille</Bullet>
             <Bullet>Pas d'exposition possible en tant que WebComponent</Bullet>
-            <Bullet>L'équipe React travaille à une future intégration</Bullet>
-            <Bullet>En attendant diverses librairies existent</Bullet>
+            <Bullet tab={1}>L'équipe React travaille à une future intégration</Bullet>
+            <Bullet tab={1}>En attendant diverses librairies existent</Bullet>
           </BulletList>
         </Slide>
         <Slide bgColor="primary">
@@ -443,9 +399,9 @@ export default class extends React.Component {
         <Slide bgColor="primary">
           <EditableComponent component={RedditLive} file="letsreact/examples/redditlive.js" />
         </Slide>
-        <Slide bgColor="primary" textColor="black" align="center top">
+        {/*<Slide bgColor="primary" textColor="black" align="center top">
           <EditableComponent component={Clock} file="letsreact/examples/clock.js" />
-        </Slide>
+        </Slide>*/}
         <Slide bgColor="black">
           <Heading size={1} textColor="white" caps>React Native</Heading>
           <Layout>
@@ -476,6 +432,14 @@ export default class extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>React Native n’est pas une webview !!!</Heading>
+        </Slide>
+        <Slide bgColor="black">
+          <Heading size={1} textColor="white" caps>React Native</Heading>
+          <Layout>
+            <Fill>
+            <Image src={images.rn.replace('/','')} width={400} height={400} />
+            </Fill>
+          </Layout>
         </Slide>
         <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>React Native</Heading>

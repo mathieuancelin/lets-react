@@ -92,10 +92,64 @@ function computeCellStyle(props) {
   return style;
 }
 
+const Topbar = React.createClass({
+  render() {
+    return (
+      <div style={Styles.top}>Topbar</div>
+    );
+  }
+});
+
+const StoryCell = React.createClass({
+  render() {
+    return (
+      <div>StoryCell</div>
+    );
+  }
+});
+
+const Sidebar = React.createClass({
+  render() {
+    return (
+      <div style={Styles.sidebar}>Sidebar</div>
+    );
+  }
+});
+
+const Viewer = React.createClass({
+  render() {
+    if (this.props.story === null) {
+      return <div style={Styles.viewer}><h2>Viewer</h2></div>;
+    }
+    return (
+      <div style={Styles.viewer}><h2>Viewer</h2></div>
+    );
+  }
+});
+
+const Reddit = React.createClass({
+  getInitialState() {
+    return {};
+  },
+  getDefaultProps() {
+    return {};
+  },
+  render() {
+    return (
+      <div style={Styles.container}>
+
+        <div style={Styles.bottom}>
+
+        </div>
+      </div>
+    );
+  }
+});
+
 export default React.createClass({
   render() {
     return (
-      <div style={Styles.container}><h1>Hello Nantes JUG</h1></div>
+      <div style={Styles.container}><h1>Hello Devoxx</h1></div>
     );
   }
 });
