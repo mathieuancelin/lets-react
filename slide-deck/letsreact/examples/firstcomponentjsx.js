@@ -54,7 +54,7 @@ export default React.createClass({
   render() {
     return (
       <div style={Style.container}>
-        <span style={Style.label}>Hello Nantes JUG!</span>
+        <span style={Style.label}>Hello Breizhcamp!</span>
       </div>
     );
   }
