@@ -352,7 +352,7 @@ export default class extends React.Component {
             <Bullet>Possibilité de générer du HTML statique depuis un composant</Bullet>
             <Bullet>Génération côté serveur</Bullet>
           </BulletList>
-        </Slide>*/}
+        </Slide>
         <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>Webcomponents</Heading>
           <BulletList>
@@ -361,7 +361,7 @@ export default class extends React.Component {
             <Bullet tab={1}>L'équipe React travaille à une future intégration</Bullet>
             <Bullet tab={1}>En attendant diverses librairies existent</Bullet>
           </BulletList>
-        </Slide>
+        </Slide>*/}
         <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>Tests</Heading>
           <Editor file="letsreact/examples/tests.example" width="100%" height={500} collapse={false}/>
@@ -433,13 +433,11 @@ export default class extends React.Component {
         <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>React Native n’est pas une webview !!!</Heading>
         </Slide>
-        <Slide bgColor="black">
-          <Heading size={1} textColor="white" caps>React Native</Heading>
-          <Layout>
-            <Fill>
-            <Image src={images.rn.replace('/','')} width={400} height={400} />
-            </Fill>
-          </Layout>
+        <Slide bgColor="primary" textColor="black" align="center top">
+          <Heading size={1} textColor="#252525" caps>React native</Heading>
+          <Fill>
+            <Image src={images.rn.replace('/','')} width="80%" height="80%" />
+          </Fill>
         </Slide>
         <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>React Native</Heading>
