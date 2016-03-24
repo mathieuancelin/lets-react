@@ -34,6 +34,7 @@ const images = {
   treeAfter: require("./images/tree-after.png"),
   rn: require("./images/rn.png"),
   cs: require("./images/cs.jpg"),
+  retthieu: require("./images/retthieu.png"),
 };
 
 const BulletList = React.createClass({
@@ -96,6 +97,7 @@ export default class extends React.Component {
         <Slide bgColor="primary">
           <Layout>
             <Fill>
+              <Image src={images.retthieu.replace('/','')} width={220} height={100} style={{ position: 'fixed', top: 700, left: 300 }} />
               <Image src={images.cs.replace('/','')} width={600} height={800} />
             </Fill>
           </Layout>
