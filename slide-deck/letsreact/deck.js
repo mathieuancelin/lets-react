@@ -33,6 +33,7 @@ const images = {
   treeBefore: require("./images/tree-before.png"),
   treeAfter: require("./images/tree-after.png"),
   rn: require("./images/rn.png"),
+  cs: require("./images/cs.jpg"),
 };
 
 const BulletList = React.createClass({
@@ -92,6 +93,13 @@ export default class extends React.Component {
             </Fill>
           </Layout>
         </Slide>
+        <Slide bgColor="primary">
+          <Layout>
+            <Fill>
+              <Image src={images.cs.replace('/','')} width={600} height={800} />
+            </Fill>
+          </Layout>
+        </Slide>
         {/*<Slide bgColor="primary" textColor="black" align="center top">
           <Heading size={1} textColor="#252525" caps>
             Serli
@@ -126,7 +134,8 @@ export default class extends React.Component {
             <Bullet tab={1}>Facebook et applications tierces</Bullet>
             <Bullet tab={1}>Appli. web instagram</Bullet>
             <Bullet tab={1}>15000 composants en production</Bullet>
-            <Bullet tab={1}>Beaucoup d'utilisateurs : Netflix, Coursera, reddit, hipchat, yahoo</Bullet>
+            <Bullet tab={1}>Beaucoup d'utilisateurs</Bullet>
+            <Bullet tab={2}>Netflix, Coursera, reddit, hipchat, yahoo</Bullet>
           </BulletList>
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
@@ -226,10 +235,10 @@ export default class extends React.Component {
           </BulletList>
         </Slide>
         */}
-        <Slide bgColor="#1C1C1C" textColor="black" align="center top">
+        {/*<Slide bgColor="#1C1C1C" textColor="black" align="center top">
           <iframe src="http://mathieuancelin.github.io/js-repaint-perfs/"
             frameBorder="0" style={{ marginTop: '50px', width: 856, height: 600, backgroundColor: 'white' }}/>
-        </Slide>
+        </Slide>*/}
         <Slide bgColor="primary" textColor="black" align="center top">
           <Heading size={1} textColor="#252525" caps>Approche composant</Heading>
           <BulletList>
