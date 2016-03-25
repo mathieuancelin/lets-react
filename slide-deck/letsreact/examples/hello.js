@@ -17,11 +17,22 @@ const Style = {
   }
 };
 
+const Hello = React.createClass({
+  render() {
+    return (
+      <div style={Style.container} onClick={() => this.forceUpdate()}>
+        <h1>time: {Date.now()}</h1>
+      </div>
+    );
+  }
+});
+
 export default React.createClass({
   render() {
     return (
-      <div style={Style.container}>
-        <h1>Hello Breizhcamp!</h1>
+      <div>
+      <Hello />
+      <Hello />
       </div>
     );
   }
