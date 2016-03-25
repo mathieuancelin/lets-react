@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.fetchSubreddit = fetchSubreddit;
 exports.fetchSubreddits = fetchSubreddits;
 function fetchSubreddit(subreddit) {
+  //fetch('http://localhost:3000/backupreddit/reddit.json')
   return fetch('http://www.reddit.com/r/' + subreddit + '.json?sort=top&t=month').then(function (r) {
     return r.json();
   }).then(function (response) {
@@ -20,6 +21,7 @@ function fetchSubreddit(subreddit) {
 }
 
 function fetchSubreddits() {
+  //return fetch('http://localhost:3000/backupreddit/reddits.json')
   return fetch('http://www.reddit.com/reddits.json').then(function (r) {
     return r.json();
   }).then(function (r) {

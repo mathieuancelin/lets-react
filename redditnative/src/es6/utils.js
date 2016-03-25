@@ -1,4 +1,5 @@
 export function fetchSubreddit(subreddit) {
+  //fetch('http://localhost:3000/backupreddit/reddit.json')
   return fetch(`http://www.reddit.com/r/${subreddit}.json?sort=top&t=month`)
     .then(r => r.json())
     .then(response => {
@@ -10,6 +11,7 @@ export function fetchSubreddit(subreddit) {
 }
 
 export function fetchSubreddits() {
+  //return fetch('http://localhost:3000/backupreddit/reddits.json')
   return fetch('http://www.reddit.com/reddits.json')
     .then(r => r.json())
     .then(r => r.data.children);
