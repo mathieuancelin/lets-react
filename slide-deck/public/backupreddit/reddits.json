@@ -1,0 +1,16 @@
+{
+  "children": [
+    {
+      "title": "Funny",
+      "display_name": "funny"
+    },
+    {
+      "title": "Pics",
+      "display_name": "pics"
+    },
+    {
+      "title": "Breizhcamp",
+      "display_name": "breizhcamp"
+    }
+  ]
+}
