@@ -52,7 +52,7 @@ const Styles = {
 function fetchSubreddit(subreddit) {
   // onClick getDefaultProps getInitialState setState props
   // thumbnail preview componentDidMount selectSelf select unread
-  // return fetch(`http://localhost:3000/backupreddit/reddit.json`).then((r) => r.json()).then((response) => {
+  // return fetch(`http://localhost:3000/api/r/${subreddit}.json`).then((r) => r.json()).then((response) => {
   return fetch(`http://www.reddit.com/r/${subreddit}.json?sort=top&t=month`).then((r) => r.json()).then((response) => {
     return response.data.children
       .filter(item => !item.data.over_18)
