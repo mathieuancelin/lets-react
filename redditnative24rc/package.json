@@ -1,0 +1,16 @@
+{
+  "name": "redditnative24rc",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "install-android": "cd ./android && ./gradlew :app:installDebug",
+    "run-adv": "$ANDROID_HOME/tools/emulator -netdelay none -netspeed full -avd reactnative",
+    "start-android": "node node_modules/react-native/local-cli/cli.js run-android hot",
+    "android-log": "adb logcat *:S ReactNative:V ReactNativeJS:V"
+  },
+  "dependencies": {
+    "react": "^0.14.8",
+    "react-native": "^0.24.0"
+  }
+}
