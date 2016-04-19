@@ -149,7 +149,7 @@ const Reddit = React.createClass({
 export default React.createClass({
   render() {
     return (
-      <div style={Styles.container}><h1>Hello Breizhcamp</h1></div>
+      <div style={Styles.container}><h1>Hello DevoxxFr</h1></div>
     );
   }
 });

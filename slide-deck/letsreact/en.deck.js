@@ -201,7 +201,7 @@ export default class extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Heading textColor="#252525" caps size={1} fit>Everything is a component</Heading>
-          <Heading caps size={2}>Hello Breizhcamp</Heading>
+          <Heading caps size={2}>Hello DevoxxFr</Heading>
           <Layout>
             <h1>I'm writing react inside react slides with react. REact !!!</h1>
           </Layout>
