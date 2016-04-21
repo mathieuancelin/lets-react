@@ -24,10 +24,18 @@ const HelloBackup = React.createClass({
 });
 
 const Hello = React.createClass({
+  getInitialState() {
+    return {
+      value: '--'
+    }
+  },
+  componentDidMount() {
+    setTimeout(() => this.setState({ value: Date.now() }), 2000);
+  },
   render() {
     return (
       <div style={Style.container}>
-        <h1>Hello DevoxxFr!</h1>
+        <h1>Hello {this.state.value}!</h1>
       </div>
     );
   }
