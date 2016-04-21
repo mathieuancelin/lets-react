@@ -97,7 +97,7 @@ export default class extends React.Component {
         <Slide bgColor="primary">
           <Layout>
             <Fill>
-              <Image src={images.retthieu.replace('/','')} width={220} height={100} style={{ position: 'fixed', top: 700, left: 300 }} />
+              {/*<Image src={images.retthieu.replace('/','')} width={220} height={100} style={{ position: 'fixed', top: 700, left: 300 }} />*/}
               <Image src={images.cs.replace('/','')} width={600} height={800} />
             </Fill>
           </Layout>
@@ -135,7 +135,7 @@ export default class extends React.Component {
             {/*<Bullet>Cible essentiellement les grosses applications JS avec des données qui changent dans le temps</Bullet>*/}
             <Bullet tab={1}>Facebook et applications tierces</Bullet>
             <Bullet tab={1}>Appli. web instagram</Bullet>
-            <Bullet tab={1}>15000 composants en production</Bullet>
+            <Bullet tab={1}>20000 composants en production</Bullet>
             <Bullet tab={1}>Beaucoup d'utilisateurs</Bullet>
             <Bullet tab={2}>Netflix, Coursera, reddit, hipchat, yahoo</Bullet>
           </BulletList>
@@ -383,16 +383,18 @@ export default class extends React.Component {
             <Fill>
               <BulletList>
                 <Bullet>React Router</Bullet>
-                <Bullet>Flux (Redux)</Bullet>
+                <Bullet>Redux</Bullet>
+                <Bullet>Immutable.js</Bullet>
+                <Bullet>Enzyme</Bullet>
                 <Bullet>Radium</Bullet>
                 <Bullet>JSXStyle</Bullet>
                 <Bullet>React canvas</Bullet>
                 <Bullet>React art</Bullet>
-                <Bullet>React motion</Bullet>
               </BulletList>
             </Fill>
             <Fill>
               <BulletList>
+                <Bullet>React motion</Bullet>
                 <Bullet>React native</Bullet>
                 <Bullet>GraphQL</Bullet>
                 <Bullet>Relay</Bullet>

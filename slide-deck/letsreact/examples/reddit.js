@@ -146,8 +146,8 @@ const Reddit = React.createClass({
     };
   },
   componentDidMount() {
-    fetch(`http://localhost:3000/api/r/${this.props.subreddit}.json`).then((r) => r.json()).then((response) => {
-    //fetch(`http://www.reddit.com/r/${this.props.subreddit}.json?sort=top&t=month`).then((r) => r.json()).then((response) => {
+    //fetch(`http://localhost:3000/api/r/${this.props.subreddit}.json`).then((r) => r.json()).then((response) => {
+    fetch(`http://www.reddit.com/r/${this.props.subreddit}.json?sort=top&t=month`).then((r) => r.json()).then((response) => {
       let stories = response.data.children
         .filter(item => !item.data.over_18)
         .filter(item => item.data.url.indexOf('imgur.com') > -1)
