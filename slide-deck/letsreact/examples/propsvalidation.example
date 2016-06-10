@@ -12,7 +12,7 @@ const MyComponent = React.createClass({
   },
   render() {
     return (
-      <h1>Hello DevoxxFr!</h1>
+      <h1>Hello Digitech!</h1>
     );
   }
 });

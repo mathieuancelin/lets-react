@@ -35,6 +35,7 @@ const images = {
   rn: require("./images/rn.png"),
   cs: require("./images/cs.jpg"),
   retthieu: require("./images/retthieu.png"),
+  hud: require("./images/HUD.gif"),
 };
 
 const BulletList = React.createClass({
@@ -76,13 +77,12 @@ export default class extends React.Component {
             <Fill>
               <Layout size={4} textColor="secondary" bgColor="white" align="left top" margin={10}>
                 <BulletList>
-                  <Bullet>Développeur @SERLI</Bullet>
+                  <Bullet>Développeur @SerliFr</Bullet>
+                  <Bullet tab={1}>stand ???</Bullet>
+                  <Bullet>Développeur @SoUse_FR</Bullet>
+                  <Bullet tab={1}>stand ???</Bullet>
                   <Bullet>Scala, Java, JS, web & OSS</Bullet>
-                  <Bullet tab={1}>ReactiveCouchbase</Bullet>
-                  <Bullet tab={1}>Weld-OSGi</Bullet>
-                  <Bullet tab={1}>etc ...</Bullet>
                   <Bullet>Poitou-Charentes JUG</Bullet>
-                  <Bullet>Expert group MVC 1.0</Bullet>
                   <Bullet>@TrevorReznik</Bullet>
                 </BulletList>
               </Layout>
@@ -137,7 +137,7 @@ export default class extends React.Component {
             <Bullet tab={1}>Appli. web instagram</Bullet>
             <Bullet tab={1}>20000 composants en production</Bullet>
             <Bullet tab={1}>Beaucoup d'utilisateurs</Bullet>
-            <Bullet tab={2}>Netflix, Coursera, reddit, hipchat, yahoo</Bullet>
+            <Bullet tab={2}>Netflix, Coursera, So Use, MAIF, reddit, hipchat, yahoo</Bullet>
           </BulletList>
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
@@ -466,6 +466,12 @@ export default class extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>Learn once write anywhere</Heading>
+        </Slide>
+        <Slide bgColor="primary" textColor="black" align="center top">
+          <Heading size={1} textColor="#252525" caps>Simple Speed HUD</Heading>
+          <Fill>
+            <Image src={images.hud.replace('/','')} width="944" />
+          </Fill>
         </Slide>
         <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>Démo</Heading>
