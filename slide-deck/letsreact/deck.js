@@ -64,8 +64,8 @@ export default class extends React.Component {
     return (
       <Deck transition={['slide']} transitionDuration={800}>
         <Slide bgColor="primary">
-          <Heading size={1} fit caps textColor="#1C1C1C">
-            Let's React
+          <Heading size={1} caps textColor="#1C1C1C">
+            React: un peu de Facebook dans ton expérience MAIF
           </Heading>
           <Heading size={4} fit caps>
             Mathieu ANCELIN (@TrevorReznik)
@@ -289,9 +289,9 @@ export default class extends React.Component {
         </Slide>*/}
         <Slide bgColor="primary">
           <Heading textColor="#252525" caps size={1} fit>Everything is a component</Heading>
-          <Heading caps size={2}>even the slides</Heading>
+          <Heading caps size={2}>hello World</Heading>
           <Layout>
-            <Editor file="letsreact/deck.js" width="100%" height={500}/>
+            <h3>Je code du react en react dans des slides en react. Recat !!!!</h3>
           </Layout>
         </Slide>
         {/*<Slide bgColor="primary" textColor="black" align="center top">

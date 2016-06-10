@@ -6,11 +6,11 @@ export const Redditnative = React.createClass({
   render() {
     // TODO : render the navigator
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Hello Digitech !!!
-        </Text>
-      </View>
+      <NavigatorIOS style={styles.navigatorios}
+        initialRoute={{
+          title: "All Subreddits",
+          component: Reddit
+        }}/>
     );
   }
 });
