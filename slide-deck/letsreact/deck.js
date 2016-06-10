@@ -78,9 +78,9 @@ export default class extends React.Component {
               <Layout size={4} textColor="secondary" bgColor="white" align="left top" margin={10}>
                 <BulletList>
                   <Bullet>Développeur @SerliFr</Bullet>
-                  <Bullet tab={1}>stand ???</Bullet>
+                  <Bullet tab={1}>checkpoint 9</Bullet>
                   <Bullet>Développeur @SoUse_FR</Bullet>
-                  <Bullet tab={1}>stand ???</Bullet>
+                  <Bullet tab={1}>le stand avec la lune</Bullet>
                   <Bullet>Scala, Java, JS, web & OSS</Bullet>
                   <Bullet>Poitou-Charentes JUG</Bullet>
                   <Bullet>@TrevorReznik</Bullet>
