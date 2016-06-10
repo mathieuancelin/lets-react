@@ -34,6 +34,8 @@ const images = {
   treeAfter: require("./images/tree-after.png"),
   rn: require("./images/rn.png"),
   cs: require("./images/cs.jpg"),
+  souse: require("./images/souse.jpg"),
+  serli: require("./images/serli.jpg"),
   retthieu: require("./images/retthieu.png"),
   hud: require("./images/HUD.gif"),
 };
@@ -99,6 +101,21 @@ export default class extends React.Component {
             <Fill>
               {/*<Image src={images.retthieu.replace('/','')} width={220} height={100} style={{ position: 'fixed', top: 700, left: 300 }} />*/}
               <Image src={images.cs.replace('/','')} width={600} height={800} />
+            </Fill>
+          </Layout>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading size={1} textColor="#252525" caps>Serli</Heading>
+          <Layout>
+            <Fill>
+              <Image src={images.serli.replace('/','')} width={944} />
+            </Fill>
+          </Layout>
+        </Slide><Slide bgColor="primary">
+          <Heading size={1} textColor="#252525" caps>So Use</Heading>
+          <Layout>
+            <Fill>
+              <Image src={images.souse.replace('/','')} width={944} />
             </Fill>
           </Layout>
         </Slide>
@@ -478,6 +495,9 @@ export default class extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>Conclusion</Heading>
+        </Slide>
+        <Slide bgColor="primary">
+          <video src="/digitech.mp4" autoplay fullscreen loop preload controls style={{ width: '100%' }}></video>
         </Slide>
       </Deck>
     )
