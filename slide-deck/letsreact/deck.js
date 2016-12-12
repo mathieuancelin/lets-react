@@ -38,6 +38,7 @@ const images = {
   serli: require("./images/serli.jpg"),
   retthieu: require("./images/retthieu.png"),
   hud: require("./images/HUD.gif"),
+  facebook: require("./images/facebook.png"),
 };
 
 const BulletList = React.createClass({
@@ -80,9 +81,7 @@ export default class extends React.Component {
               <Layout size={4} textColor="secondary" bgColor="white" align="left top" margin={10}>
                 <BulletList>
                   <Bullet>Développeur @SerliFr</Bullet>
-                  <Bullet tab={1}>checkpoint 9</Bullet>
-                  <Bullet>Développeur @SoUse_FR</Bullet>
-                  <Bullet tab={1}>le stand avec la lune</Bullet>
+                  <Bullet>MacGyver @SoUse_FR</Bullet>
                   <Bullet>Scala, Java, JS, web & OSS</Bullet>
                   <Bullet>Poitou-Charentes JUG</Bullet>
                   <Bullet>@TrevorReznik</Bullet>
@@ -148,13 +147,20 @@ export default class extends React.Component {
             <Bullet tab={1}>rend des vues et répond à des évènements</Bullet>
             <Bullet tab={1}>le V de MVC ;-)</Bullet>
             <Bullet tab={1}>pas de full stack</Bullet>
-            <Bullet>Créé en 2011 et open source depuis Mai 2013</Bullet>
+          </BulletList>
+        </Slide>
+        <Slide bgColor="primary" textColor="black" align="center top">
+          <Heading size={1} textColor="#252525" caps>React by Facebook</Heading>
+          <BulletList>
+            <Bullet>"Rethink established best practices"</Bullet>
+            <Bullet>Créé en 2012 et open source depuis Mai 2013</Bullet>
             {/*<Bullet>Cible essentiellement les grosses applications JS avec des données qui changent dans le temps</Bullet>*/}
             <Bullet tab={1}>Facebook et applications tierces</Bullet>
             <Bullet tab={1}>Appli. web instagram</Bullet>
-            <Bullet tab={1}>20000 composants en production</Bullet>
-            <Bullet tab={1}>Beaucoup d'utilisateurs</Bullet>
-            <Bullet tab={2}>Netflix, Coursera, So Use, MAIF, reddit, hipchat, yahoo</Bullet>
+            <Bullet tab={1}>25000 composants en production</Bullet>
+            <Bullet>Beaucoup d'utilisateurs</Bullet>
+            <Bullet tab={1}>Netflix, Coursera, So Use, reddit</Bullet>
+            <Bullet tab={1}>uber, hipchat, yahoo, etc ...</Bullet>
           </BulletList>
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
@@ -270,6 +276,13 @@ export default class extends React.Component {
           <Heading size={1} textColor="#252525" caps fit>Hello React</Heading>
           <EditableComponent component={Hello} file="letsreact/examples/hello.js" />
         </Slide>
+        <Slide bgColor="primary" textColor="black" align="center top">
+          <Layout>
+            <Fill>
+            <Image src={images.facebook.replace('/','')} />
+            </Fill>
+          </Layout>
+        </Slide>
         {/*<Slide bgColor="primary" textColor="black" align="center top">
           <Image src={images.dafuq.replace('/','')} width="80%" height="80%" />
         </Slide>
@@ -330,7 +343,7 @@ export default class extends React.Component {
         <Slide bgColor="primary" textColor="black" align="center top">
           <Heading size={1} textColor="#252525" caps>Context</Heading>
           <BulletList>
-            <Bullet>Représente un object passé implicitement du parent aux enfant</Bullet>
+            <Bullet>Représente un object passé implicitement du parent aux enfants</Bullet>
             <Bullet tab={1}>pas sujet au refresh d'interface</Bullet>
             <Bullet>Necéssite de la validation pour pouvoir y accéder</Bullet>
           </BulletList>
@@ -395,6 +408,9 @@ export default class extends React.Component {
           <Editor file="letsreact/examples/tests.example" width="100%" height={500} collapse={false}/>
         </Slide>
         <Slide bgColor="primary">
+          <Heading size={1} textColor="#252525" caps>Enzyme</Heading>
+        </Slide>
+        <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>Ecosystème</Heading>
           <Layout>
             <Fill>
@@ -407,6 +423,7 @@ export default class extends React.Component {
                 <Bullet>JSXStyle</Bullet>
                 <Bullet>React canvas</Bullet>
                 <Bullet>React art</Bullet>
+                <Bullet>React VR</Bullet>
               </BulletList>
             </Fill>
             <Fill>
