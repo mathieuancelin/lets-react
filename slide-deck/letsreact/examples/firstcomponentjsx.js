@@ -54,7 +54,7 @@ export default React.createClass({
   render() {
     return (
       <div style={Style.container}>
-        <span style={Style.label}>Hello Digitech!</span>
+        <span style={Style.label}>Hello NormandyJUG!</span>
       </div>
     );
   }

@@ -1,0 +1,3 @@
+rootProject.name = 'redditnative039'
+
+include ':app'

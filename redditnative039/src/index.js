@@ -1,4 +1,5 @@
-import React, { NavigatorIOS, TabBarIOS, Text, View } from 'react-native';
+import React from 'react';
+import { NavigatorIOS, TabBarIOS, Text, View } from 'react-native';
 import { styles } from './style';
 import { Reddit } from './reddit';
 

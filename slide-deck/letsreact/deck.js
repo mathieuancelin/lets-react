@@ -496,9 +496,6 @@ export default class extends React.Component {
         <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>Conclusion</Heading>
         </Slide>
-        <Slide bgColor="primary">
-          <video src="/digitech.mp4" autoplay fullscreen loop preload controls style={{ width: '100%' }}></video>
-        </Slide>
       </Deck>
     )
   }
