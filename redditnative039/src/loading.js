@@ -1,5 +1,5 @@
 import React from 'react';
-import { ActivityIndicatorIOS, ListView, Text, TouchableHighlight, View } from 'react-native';
+import { ActivityIndicator, ListView, Text, TouchableHighlight, View } from 'react-native';
 import { styles } from './style';
 
 export const Loading = React.createClass({
@@ -10,7 +10,7 @@ export const Loading = React.createClass({
           <Text style={styles.welcome}>
             Loading {this.props.what}
           </Text>
-          <ActivityIndicatorIOS style={{ marginTop: 30 }} animating={true} size="large" />
+          <ActivityIndicator style={{ marginTop: 30 }} animating={true} size="large" />
         </View>
       </View>
     );
