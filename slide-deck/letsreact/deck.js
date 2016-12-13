@@ -25,6 +25,7 @@ import Editor from "./utils/editor";
 const images = {
   jsc: require("./images/background.png"),
   mathieu: require("./images/mathieu.jpg"),
+  sebastien: require("./images/sebastien.jpg"),
   reactLogo: require("./images/react-logo.png"),
   etoiles: require("./images/etoiles.png"),
   favorite: require("./images/favorites.png"),
@@ -39,6 +40,8 @@ const images = {
   retthieu: require("./images/retthieu.png"),
   hud: require("./images/HUD.gif"),
   facebook: require("./images/facebook.png"),
+  souseReact: require("./images/souse-react.png"),
+  souseSpa: require("./images/souse-spa.png"),
 };
 
 const BulletList = React.createClass({
@@ -100,6 +103,29 @@ export default class extends React.Component {
             <Fill>
               {/*<Image src={images.retthieu.replace('/','')} width={220} height={100} style={{ position: 'fixed', top: 700, left: 300 }} />*/}
               <Image src={images.cs.replace('/','')} width={600} height={800} />
+            </Fill>
+          </Layout>
+        </Slide>
+        <Slide bgColor="primary" textColor="black" align="center top">
+          <Heading size={1} textColor="#252525" caps>
+            Sébastien PRUNIER
+          </Heading>
+          <Layout>
+            <Fill>
+              <Layout size={4} textColor="secondary" bgColor="white" align="left top" margin={10}>
+                <BulletList>
+                  <Bullet>Développeur @SerliFr</Bullet>
+                  <Bullet>CTO @SoUse_FR</Bullet>
+                  <Bullet>Scala, Java, JS, web & OSS</Bullet>
+                  <Bullet>Nantes JUG</Bullet>
+                  <Bullet>@sebprunier</Bullet>
+                </BulletList>
+              </Layout>
+            </Fill>
+            <Fill>
+              <Layout size={4} textColor="secondary" bgColor="white" margin={10}>
+                <Image src={images.sebastien.replace('/','')} width="100%" height="100%" />
+              </Layout>
             </Fill>
           </Layout>
         </Slide>
@@ -277,10 +303,15 @@ export default class extends React.Component {
           <EditableComponent component={Hello} file="letsreact/examples/hello.js" />
         </Slide>
         <Slide bgColor="primary" textColor="black" align="center top">
-          <Layout>
-            <Fill>
-            <Image src={images.facebook.replace('/','')} />
-            </Fill>
+          <Heading size={1} textColor="#252525" caps>React is so heavy !</Heading>
+          <Layout size={4} textColor="secondary" bgColor="white" align="left top" margin={10}>
+            <Editor file="letsreact/examples/hello.html" collapse={false} width="944" height={550}/>
+          </Layout>
+        </Slide>
+        <Slide bgColor="primary" textColor="black" align="center top">
+          <Heading size={1} textColor="#252525" caps>React is so heavy !</Heading>
+          <Layout size={4} textColor="secondary" bgColor="white" align="left top" margin={10}>
+            <Editor file="letsreact/examples/hellojsx.html" collapse={false} width="944" height={580}/>
           </Layout>
         </Slide>
         {/*<Slide bgColor="primary" textColor="black" align="center top">
@@ -305,6 +336,27 @@ export default class extends React.Component {
           <Heading caps size={2}>even the slides</Heading>
           <Layout>
             <Editor file="letsreact/deck.js" width="100%" height={500}/>
+          </Layout>
+        </Slide>
+        <Slide bgColor="primary" textColor="black" align="center top">
+          <Layout>
+            <Fill>
+            <Image src={images.facebook.replace('/','')} width="100%" />
+            </Fill>
+          </Layout>
+        </Slide>
+        <Slide bgColor="primary" textColor="black" align="center top">
+          <Layout>
+            <Fill>
+            <Image src={images.souseReact.replace('/','')} width="100%" />
+            </Fill>
+          </Layout>
+        </Slide>
+        <Slide bgColor="primary" textColor="black" align="center top">
+          <Layout>
+            <Fill>
+            <Image src={images.souseSpa.replace('/','')} width="100%" />
+            </Fill>
           </Layout>
         </Slide>
         {/*<Slide bgColor="primary" textColor="black" align="center top">
