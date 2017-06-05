@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 const maxHeight = 200;
 const height = 300;

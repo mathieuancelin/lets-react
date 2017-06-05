@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export default React.createClass({
-  getInitialState() {
-    return { count: 0 };
-  },
-  handleClick() {
+export default class extends Component {
+
+  state = { count: 0 };
+
+  handleClick = () => {
     this.setState({ count: this.state.count + 1 });
-  },
+  }
   render() {
     return (
       React.createElement("div", {style: { display: 'flex', marginTop: 30, marginLeft: 40, fontSize: 24 }},
@@ -17,6 +17,6 @@ export default React.createClass({
       )
     );
   }
-});
+}
 
 // React.render(React.createElement(Clicker, null), mountNode);

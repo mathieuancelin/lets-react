@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const LikesBackup = React.createClass({
-  getInitialState() {
-    return { likes: 0 };
-  },
-  like() {
+class LikesBackup extends Component {
+
+  state = { likes: 0 };
+
+  like = () => {
     this.setState({ likes: this.state.likes + 1 });
-  },
+  }
   render() {
     return (
       <div style={Style.container}>
@@ -17,7 +17,7 @@ const LikesBackup = React.createClass({
       </div>
     );
   }
-});
+}
 
 const Style = {
   container: {
@@ -50,7 +50,7 @@ const Style = {
   }
 };
 
-export default React.createClass({
+export default class extends Component {
   render() {
     return (
       <div style={Style.container}>
@@ -58,4 +58,4 @@ export default React.createClass({
       </div>
     );
   }
-});
+}

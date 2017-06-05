@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const MyComponent = React.createClass({
-  propTypes: {
+class MyComponent extends Component {
+
+  static propTypes = {
     tasks: React.PropTypes.array,
     displayDate: React.PropTypes.bool,
     formatDate: React.PropTypes.func,
@@ -9,10 +10,11 @@ const MyComponent = React.createClass({
     config: React.PropTypes.object,
     title: React.PropTypes.string,
     required: React.PropTypes.*.isRequired,
-  },
+  };
+
   render() {
     return (
       <h1>Hello LavaJUG!</h1>
     );
   }
-});
+}

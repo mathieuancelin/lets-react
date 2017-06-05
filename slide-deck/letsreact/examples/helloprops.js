@@ -1,24 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const HelloWhoBackup = React.createClass({
-  getDefaultProps() {
-    return {
-      who: 'LavaJUG'
-    };
-  },
+class HelloWhoBackup extends Component {
+  static defaultProps = {
+    who: 'LavaJUG'
+  };
   render() {
     return (
       <h1>Hello {this.props.who}!</h1>
     );
   }
-});
-const BorderedBackup = React.createClass({
+}
+
+class BorderedBackup extends Component {
   render() {
     return (
       <div style={{ border: 'solid 1px black', padding: '10px 10px 10px 10px' }}>{this.props.children}</div>
     );
   }
-});
+}
 
 const Style = {
   container: {
@@ -27,7 +26,7 @@ const Style = {
   }
 };
 
-export default React.createClass({
+export default class extends Component {
   render() {
     return (
       <div style={Style.container}>
@@ -35,4 +34,4 @@ export default React.createClass({
       </div>
     );
   }
-});
+}

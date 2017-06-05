@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const HelloBackup = React.createClass({
+class HelloBackup extends Component {
   render() {
     return (
       <div style={Style.container} onClick={() => this.forceUpdate()}>
@@ -8,7 +8,7 @@ const HelloBackup = React.createClass({
       </div>
     );
   }
-});
+}
 
 const Style = {
   container: {
@@ -17,7 +17,7 @@ const Style = {
   }
 };
 
-export default React.createClass({
+export default class extends Component {
   render() {
     return (
       <div style={Style.container}>
@@ -25,6 +25,6 @@ export default React.createClass({
       </div>
     );
   }
-});
+}
 
 // React.render(React.createElement(???, null), mountNode);

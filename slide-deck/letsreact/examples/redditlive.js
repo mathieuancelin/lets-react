@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 const maxHeight = 200;
 const height = 300;
@@ -92,31 +92,31 @@ function computeCellStyle(props) {
   return style;
 }
 
-const Topbar = React.createClass({
+class Topbar extends Component {
   render() {
     return (
       <div style={Styles.top}>Topbar</div>
     );
   }
-});
+}
 
-const StoryCell = React.createClass({
+class StoryCell extends Component {
   render() {
     return (
       <div>StoryCell</div>
     );
   }
-});
+}
 
-const Sidebar = React.createClass({
+class Sidebar extends Component {
   render() {
     return (
       <div style={Styles.sidebar}>Sidebar</div>
     );
   }
-});
+}
 
-const Viewer = React.createClass({
+class Viewer extends Component {
   render() {
     if (this.props.story === null) {
       return <div style={Styles.viewer}><h2>Viewer</h2></div>;
@@ -125,15 +125,11 @@ const Viewer = React.createClass({
       <div style={Styles.viewer}><h2>Viewer</h2></div>
     );
   }
-});
+}
 
-const Reddit = React.createClass({
-  getInitialState() {
-    return {};
-  },
-  getDefaultProps() {
-    return {};
-  },
+class Reddit extends Component {
+  state = {};
+  static defaultProps = {};
   render() {
     return (
       <div style={Styles.container}>
@@ -144,12 +140,12 @@ const Reddit = React.createClass({
       </div>
     );
   }
-});
+}
 
-export default React.createClass({
+export default class extends Component {
   render() {
     return (
       <div style={Styles.container}><h1>Hello LavaJUG</h1></div>
     );
   }
-});
+}

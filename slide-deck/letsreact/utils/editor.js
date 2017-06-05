@@ -136,6 +136,19 @@ export default React.createClass({
             '});'
           ].join('\n'));
           that.currentPrefix = '';
+        } else if (that.currentPrefix === 'rexcomp') {
+          that.editor.removeWordLeft();
+          that.editor.insert([
+            'class MyNewComponent extends Component {',
+            '  render() {',
+            '    return (',
+            '      ',
+            '    );',
+            '  }',
+            '}'
+          ].join('\n'));
+          that.currentPrefix = '';
+          that.editor.find('MyNewComponent');
         } else {
           that.editor.insert('  ');
         }

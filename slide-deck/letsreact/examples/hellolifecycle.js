@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 const Style = {
   container: {
@@ -7,13 +7,13 @@ const Style = {
   }
 };
 
-const HelloBackup = React.createClass({
-  getInitialState() {
-    return { value: '--' };
-  },
+class HelloBackup extends Component {
+  state = { value: '--' };
+
   componentDidMount() {
     setTimeout(() => this.setState({ value: Date.now() }), 2000);
-  },
+  }
+
   render() {
     return (
       <div style={Style.container}>
@@ -21,9 +21,9 @@ const HelloBackup = React.createClass({
       </div>
     );
   }
-});
+}
 
-const Hello = React.createClass({
+class Hello extends Component {
   render() {
     return (
       <div style={Style.container}>
@@ -31,14 +31,14 @@ const Hello = React.createClass({
       </div>
     );
   }
-})
+}
 
-export default React.createClass({
+export default class extends Component {
   render() {
     return (
       <Hello />
     );
   }
-});
+}
 
 // React.render(React.createElement(???, null), mountNode);
