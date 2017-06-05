@@ -4,7 +4,7 @@ const HelloBackup = React.createClass({
   render() {
     return (
       <div style={Style.container} onClick={() => this.forceUpdate()}>
-        <h1>Hello NormandyJUG! ({Date.now()})</h1>
+        <h1>Hello LavaJUG! ({Date.now()})</h1>
       </div>
     );
   }
@@ -21,7 +21,7 @@ export default React.createClass({
   render() {
     return (
       <div style={Style.container}>
-        <h1>Hello NormandyJUG!</h1>
+        <h1>Hello LavaJUG!</h1>
       </div>
     );
   }

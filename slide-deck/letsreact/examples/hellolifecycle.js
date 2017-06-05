@@ -27,7 +27,7 @@ const Hello = React.createClass({
   render() {
     return (
       <div style={Style.container}>
-        <h1>Hello NormandyJUG!</h1>
+        <h1>Hello LavaJUG!</h1>
       </div>
     );
   }
