@@ -14,10 +14,17 @@ export const SubReddit = React.createClass({
     };
   },
   componentDidMount() {
-    // TODO : load subreddit stories
+    fetchSubreddit(this.props.display_name).then(data => {
+      this.setState({
+        loaded: true,
+        dataSource: this.state.dataSource.cloneWithRows(data)
+      });
+    });
   },
   render() {
-    // TODO : loading page
+    if (!this.state.loaded) {
+      return <Loading what={this.props.display_name} />
+    }
     return (
       <ListView
           style={{ marginTop: 40 }}

@@ -51,10 +51,19 @@ const Style = {
 };
 
 export default React.createClass({
+  getInitialState() {
+    return {
+      likes: 0
+    };
+  },
+  like() {
+    this.setState({ likes: this.state.likes + 1 });
+  },
   render() {
     return (
       <div style={Style.container}>
-        <span style={Style.label}>Hello NormandyJUG!</span>
+        <span style={Style.label}>Likes: {this.state.likes}</span>
+        <button type="button" style={Style.button} onClick={this.like}>+1</button>
       </div>
     );
   }

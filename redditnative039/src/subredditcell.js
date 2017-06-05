@@ -8,7 +8,7 @@ export const SubRedditCell = React.createClass({
       <TouchableHighlight onPress={this.props.onSelect}>
         <View style={styles.container}>
           <Text style={styles.subredditTitle}>
-            {this.props.subreddit.data.title}
+            a{this.props.subreddit.data.title}a
           </Text>
         </View>
       </TouchableHighlight>
