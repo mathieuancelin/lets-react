@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Text, TouchableHighlight, View } from 'react-native';
 import { styles } from './style';
 
-export const SubRedditCell = React.createClass({
+export class SubRedditCell extends Component {
   render() {
     return (
       <TouchableHighlight onPress={this.props.onSelect}>
@@ -14,7 +14,7 @@ export const SubRedditCell = React.createClass({
       </TouchableHighlight>
     );
   }
-});
+}
 
 
 

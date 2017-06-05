@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Image, Text, TouchableHighlight, View } from 'react-native';
 import { styles } from './style';
 
-export const StoryCell = React.createClass({
+export class StoryCell extends Component {
   // TODO : display thumbnail
   render() {
     return (
@@ -15,7 +15,7 @@ export const StoryCell = React.createClass({
       </TouchableHighlight>
     );
   }
-});
+}
 
 
 

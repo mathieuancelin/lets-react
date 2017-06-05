@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Image, Dimensions, ScrollView, Text, View, WebView } from 'react-native';
 import { styles } from './style';
 
-export const Story = React.createClass({
+export class Story extends Component {
   render() {
     const style = {};
     const currentWindow = Dimensions.get('window');
@@ -22,4 +22,4 @@ export const Story = React.createClass({
       </View>
     );
   }
-});
+}

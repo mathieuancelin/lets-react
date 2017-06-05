@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { ActivityIndicatorIOS, ListView, Text, TouchableHighlight, View } from 'react-native';
 import { styles } from './style';
 import { StoryCell } from './storycell';
@@ -6,16 +6,16 @@ import { Story } from './story';
 import { Loading } from './loading';
 import { fetchSubreddit } from './utils';
 
-export const SubReddit = React.createClass({
-  getInitialState() {
-    return {
-      dataSource: new ListView.DataSource({ rowHasChanged: (row1, row2) => row1 !== row2 }),
-      loaded: false
-    };
-  },
+export class SubReddit extends Component {
+  state = {
+    dataSource: new ListView.DataSource({ rowHasChanged: (row1, row2) => row1 !== row2 }),
+    loaded: false
+  };
+
   componentDidMount() {
     // TODO : load subreddit stories
-  },
+  }
+
   render() {
     // TODO : loading page
     return (
@@ -24,13 +24,15 @@ export const SubReddit = React.createClass({
           dataSource={this.state.dataSource}
           renderRow={this.renderStories} />
     );
-  },
-  renderStories(item) {
+  }
+
+  renderStories = (item) => {
     return(
       <StoryCell onSelect={() => this.selectStory(item)} story={item}/>
     );
-  },
-  selectStory(item) {
+  };
+
+  selectStory = (item) => {
     const { url, width, height } = item.data.preview.images[0].source;
     this.props.navigator.push({
       title: item.data.title,
@@ -41,8 +43,8 @@ export const SubReddit = React.createClass({
         height
       }
     });
-  }
-});
+  };
+}
 
 
 

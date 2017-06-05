@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { ActivityIndicatorIOS, ListView, Text, TouchableHighlight, View } from 'react-native';
 import { styles } from './style';
 import { SubRedditCell } from './subredditcell';
@@ -6,16 +6,17 @@ import { SubReddit } from './subreddit';
 import { Loading } from './loading';
 import { fetchSubreddits } from './utils';
 
-export const Reddit = React.createClass({
-  getInitialState() {
-    return {
-      dataSource: new ListView.DataSource({rowHasChanged: (row1, row2) => row1 !== row2}),
-      loaded: false
-    };
-  },
+export class Reddit extends Component {
+
+  state = {
+    dataSource: new ListView.DataSource({rowHasChanged: (row1, row2) => row1 !== row2}),
+    loaded: false
+  };
+
   componentDidMount() {
     // TODO : load subreddits 2
-  },
+  }
+
   render() {
     // TODO : loading page 1
     return (
@@ -24,16 +25,18 @@ export const Reddit = React.createClass({
           dataSource={this.state.dataSource}
           renderRow={this.renderSubReddit} />
     );
-  },
-  renderSubReddit(item) {
+  }
+
+  renderSubReddit = (item) => {
     return(
       <SubRedditCell onSelect={() => this.selectSubReddit(item)} subreddit={item}/>
     );
-  },
-  selectSubReddit(item) {
+  };
+
+  selectSubReddit = (item) => {
     // TODO : handle subreddit selection, navigate to subreddit 3
-  }
-});
+  };
+}
 
 
 
