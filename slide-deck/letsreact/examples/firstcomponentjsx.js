@@ -6,7 +6,8 @@ class LikesBackup extends Component {
 
   like = () => {
     this.setState({ likes: this.state.likes + 1 });
-  }
+  };
+  
   render() {
     return (
       <div style={Style.container}>

@@ -8,6 +8,7 @@ const Style = {
 };
 
 class HelloBackup extends Component {
+  
   state = { value: '--' };
 
   componentDidMount() {

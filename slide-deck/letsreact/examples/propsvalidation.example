@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class MyComponent extends Component {
 
   static propTypes = {
-    tasks: React.PropTypes.array,
-    displayDate: React.PropTypes.bool,
-    formatDate: React.PropTypes.func,
-    nrbOfItems: React.PropTypes.number,
-    config: React.PropTypes.object,
-    title: React.PropTypes.string,
-    required: React.PropTypes.*.isRequired,
+    tasks: PropTypes.array,
+    displayDate: PropTypes.bool,
+    formatDate: PropTypes.func,
+    nrbOfItems: PropTypes.number,
+    config: PropTypes.object,
+    title: PropTypes.string,
+    required: PropTypes.*.isRequired,
   };
 
   render() {
