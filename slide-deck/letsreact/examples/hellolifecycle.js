@@ -8,7 +8,7 @@ const Style = {
 };
 
 class HelloBackup extends Component {
-  
+
   state = { value: '--' };
 
   componentDidMount() {
@@ -23,6 +23,8 @@ class HelloBackup extends Component {
     );
   }
 }
+
+const geopip = 'https://freegeoip.net/json/';
 
 class Hello extends Component {
   render() {
