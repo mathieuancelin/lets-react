@@ -410,7 +410,7 @@ export default class extends React.Component {
             <Bullet>componentWillMount</Bullet>
             <Bullet>componentDidMount</Bullet>
             <Bullet>componentWillReceiveProps</Bullet>
-            <Bullet>shouldUpdateComponent</Bullet>
+            <Bullet>shouldComponentUpdate</Bullet>
             <Bullet>componentWillUpdate</Bullet>
             <Bullet>componentDidUpdate</Bullet>
             <Bullet>componentWillUnmount</Bullet>
