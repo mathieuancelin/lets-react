@@ -1,0 +1,11 @@
+{
+  "name": "redux-101",
+  "version": "1.0.0",
+  "description": "Crash course into redux",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "redux": "^3.7.2"
+  }
+}
