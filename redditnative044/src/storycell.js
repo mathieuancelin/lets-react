@@ -8,6 +8,7 @@ export class StoryCell extends Component {
     return (
       <TouchableHighlight onPress={this.props.onSelect}>
         <View style={styles.container}>
+          <Image style={styles.thumbnail} source={{ uri: this.props.story.data.thumbnail }} />
           <Text style={styles.subredditTitle}>
             {this.props.story.data.title}
           </Text>

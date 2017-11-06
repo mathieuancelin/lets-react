@@ -51,12 +51,30 @@ const Style = {
   }
 };
 
-export default class extends Component {
+class Liker extends Component {
+  
+  state = {
+    likes: 0
+  }
+  
+  like = () => {
+    this.setState({ likes: this.state.likes + 1 })
+  }
+  
   render() {
     return (
       <div style={Style.container}>
-        <span style={Style.label}>Hello LavaJUG!</span>
+        <span style={Style.label}>Likes : {this.state.likes}</span>
+        <button style={Style.button} type="button" onClick={this.like}>+1</button>
       </div>
+    );
+  }
+}
+
+export default class extends Component {
+  render() {
+    return (
+      <Liker />
     );
   }
 }

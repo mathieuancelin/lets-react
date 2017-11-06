@@ -7,11 +7,10 @@ export class Redditnative extends Component {
   render() {
     // TODO : render the navigator
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Hello LavaJUG !!!
-        </Text>
-      </View>
+      <NavigatorIOS style={styles.navigatorios} initialRoute={{
+        title: 'All Subreddits',
+        component: Reddit
+      }} />
     );
   }
 }

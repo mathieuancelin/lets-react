@@ -26,12 +26,31 @@ const Style = {
   }
 };
 
-export default class extends Component {
+class HelloWho extends Component {
+  
+  static defaultProps = {
+    who: 'LavaJUG'
+  }
+  
   render() {
     return (
       <div style={Style.container}>
-        <h1>Hello LavaJUG!</h1>
+        <h1>Hello {this.props.who}!</h1>
+        <ul>{this.props.children}</ul>
       </div>
+    );
+  }
+}
+
+export default class extends Component {
+  render() {
+    return (
+      <HelloWho who="Mathieu">
+        <li>Scala</li>
+        <li>Java</li>
+        <li>Javascript</li>
+        <li>Rust</li>
+      </HelloWho>
     );
   }
 }

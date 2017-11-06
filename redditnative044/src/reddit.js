@@ -14,11 +14,18 @@ export class Reddit extends Component {
   };
 
   componentDidMount() {
-    // TODO : load subreddits 2
+    fetchSubreddits().then(data => {
+      this.setState({
+        loaded: true,
+        dataSource: this.state.dataSource.cloneWithRows(data)
+      })
+    });
   }
 
   render() {
-    // TODO : loading page 1
+    if (!this.state.loaded) {
+      return <Loading what="Subreddits" />
+    }
     return (
       <ListView
           style={{ marginTop: 40 }}
@@ -34,7 +41,13 @@ export class Reddit extends Component {
   };
 
   selectSubReddit = (item) => {
-    // TODO : handle subreddit selection, navigate to subreddit 3
+    this.props.navigator.push({
+      title: item.data.title,
+      component: SubReddit,
+      passProps: {
+        display_name: item.data.display_name
+      }
+    })
   };
 }
 

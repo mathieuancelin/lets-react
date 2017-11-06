@@ -27,10 +27,22 @@ class HelloBackup extends Component {
 const geopip = 'https://freegeoip.net/json/';
 
 class Hello extends Component {
+  
+  state = {
+    value: ''
+  }
+  
+  componentDidMount() {
+    this.setState({ value: '--' });
+    fetch('https://freegeoip.net/json/').then(r => r.json()).then(data => {
+      this.setState({ value: `${data.city}: ${data.latitude} / ${data.longitude}` })
+    }) 
+  }
+  
   render() {
     return (
       <div style={Style.container}>
-        <h1>Hello LavaJUG!</h1>
+        <h1>Hello {this.state.value}!</h1>
       </div>
     );
   }

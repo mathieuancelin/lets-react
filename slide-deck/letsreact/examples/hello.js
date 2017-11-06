@@ -17,12 +17,23 @@ const Style = {
   }
 };
 
+class Hello extends Component {
+  render() {
+    return (
+      <div style={Style.container} onClick={() => this.forceUpdate()}>
+        <h1>Hello {Date.now()}!</h1>
+      </div>
+    );
+  }
+}
+
 export default class extends Component {
   render() {
     return (
-      <div style={Style.container}>
-        <h1>Hello LavaJUG!</h1>
-      </div>
+      React.createElement('div', null, 
+        React.createElement(Hello, null),
+        React.createElement(Hello, null)
+      )
     );
   }
 }

@@ -93,17 +93,34 @@ function computeCellStyle(props) {
 }
 
 class Topbar extends Component {
+  
+  static defaultProps = {
+    unread: 0
+  }
+  
   render() {
     return (
-      <div style={Styles.top}>Topbar</div>
+      <div style={Styles.top}>
+        <div style={Styles.unread}>
+        You have {this.props.unread} unread stories
+        </div>
+      </div>
     );
   }
 }
 
 class StoryCell extends Component {
+  
+  select = () => {
+    this.props.select(this.props.story);
+  }
+  
   render() {
     return (
-      <div>StoryCell</div>
+      <div style={computeCellStyle(this.props)} onClick={this.select}>
+        <img width={60} height={60} src={this.props.story.thumbnail} />
+        <p style={{ marginLeft: 5 }}>{this.props.story.title}</p>
+      </div>
     );
   }
 }
@@ -111,7 +128,17 @@ class StoryCell extends Component {
 class Sidebar extends Component {
   render() {
     return (
-      <div style={Styles.sidebar}>Sidebar</div>
+      <div style={Styles.sidebar}>
+        {
+          this.props.stories
+            .map(s => s.data)
+            .map(story => <StoryCell 
+              select={this.props.select}
+              selected={this.props.selected}
+              unread={this.props.read.indexOf(story.id) < 0}
+              story={story} />)
+        }
+      </div>
     );
   }
 }
@@ -119,23 +146,51 @@ class Sidebar extends Component {
 class Viewer extends Component {
   render() {
     if (this.props.story === null) {
-      return <div style={Styles.viewer}><h2>Viewer</h2></div>;
+      return <div style={Styles.viewer}><h2>Nothing here ...</h2></div>;
     }
+    const source = this.props.story.preview.images[0].source;
     return (
-      <div style={Styles.viewer}><h2>Viewer</h2></div>
+      <div style={Styles.viewer}>
+        <h2>UPS {this.props.story.ups} / DOWNS {this.props.story.downs}</h2>
+        <img style={computeImageStyle(source)} src={source.url} />
+      </div>
     );
   }
 }
 
 class Reddit extends Component {
-  state = {};
-  static defaultProps = {};
+  state = {
+    stories: [],
+    read: [],
+    selected: null
+  };
+  static defaultProps = {
+    subreddit: 'funny'
+  };
+  
+  componentDidMount() {
+    fetchSubreddit(this.props.subreddit).then(stories => {
+      const first = stories[0].data;
+      this.setState({ stories, selected: first, read: [first.id] })
+    });
+  }
+  
+  select = (selected) => {
+    this.setState({ selected, read: [ ...this.state.read, selected.id ] })
+  }
+  
   render() {
+    const unread = computeUnread(this.state);
     return (
       <div style={Styles.container}>
-
+        <Topbar unread={unread} />
         <div style={Styles.bottom}>
-
+          <Sidebar 
+            select={this.select}
+            selected={this.state.selected}
+            read={this.state.read}
+            stories={this.state.stories} />
+          <Viewer story={this.state.selected} />
         </div>
       </div>
     );
@@ -145,7 +200,7 @@ class Reddit extends Component {
 export default class extends Component {
   render() {
     return (
-      <div style={Styles.container}><h1>Hello LavaJUG</h1></div>
+      <Reddit />
     );
   }
 }
