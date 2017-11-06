@@ -42,6 +42,7 @@ const images = {
   facebook: require("./images/facebook.png"),
   souseReact: require("./images/souse-react.png"),
   souseSpa: require("./images/souse-spa.png"),
+  reduxgif: require("./images/redux.gif"),
 };
 
 const BulletList = React.createClass({
@@ -84,7 +85,7 @@ export default class extends React.Component {
               <Layout size={4} textColor="secondary" bgColor="white" align="left top" margin={10}>
                 <BulletList>
                   <Bullet>Développeur @SerliFr</Bullet>
-                  <Bullet>MacGyver @SoUse_FR</Bullet>
+                  <Bullet>MacGyver @MAIFX</Bullet>
                   <Bullet>Scala, Java, JS, web & OSS</Bullet>
                   <Bullet>Poitou-Charentes JUG</Bullet>
                   <Bullet>@TrevorReznik</Bullet>
@@ -106,7 +107,7 @@ export default class extends React.Component {
             </Fill>
           </Layout>
         </Slide>
-        <Slide bgColor="primary" textColor="black" align="center top">
+        {/*<Slide bgColor="primary" textColor="black" align="center top">
           <Heading size={1} textColor="#252525" caps>
             Sébastien PRUNIER
           </Heading>
@@ -128,7 +129,7 @@ export default class extends React.Component {
               </Layout>
             </Fill>
           </Layout>
-        </Slide>
+        </Slide>*/}
         <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>Serli</Heading>
           <Layout>
@@ -136,14 +137,15 @@ export default class extends React.Component {
               <Image src={images.serli.replace('/','')} width={944} />
             </Fill>
           </Layout>
-        </Slide><Slide bgColor="primary">
+        </Slide>
+        {/*<Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>So Use</Heading>
           <Layout>
             <Fill>
               <Image src={images.souse.replace('/','')} width={944} />
             </Fill>
           </Layout>
-        </Slide>
+        </Slide>*/}
         {/*<Slide bgColor="primary" textColor="black" align="center top">
           <Heading size={1} textColor="#252525" caps>
             Serli
@@ -561,6 +563,68 @@ export default class extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>Démo</Heading>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading size={1} textColor="#252525" caps>Redux</Heading>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading size={1} textColor="#252525" caps>Redux</Heading>
+          <BulletList>
+            <Bullet>Redux est un conteneur d’état prédictible pour applications Javascript</Bullet>
+            <Bullet tab={1}>Gestion d’états complexes</Bullet>
+            <Bullet>Pour des applications qui</Bullet>
+            <Bullet tab={1}>se comportent de manière invariable</Bullet>
+            <Bullet tab={1}>fonctionneront de la même manière dans des environnements différents (client, server, natif)</Bullet>
+            <Bullet tab={1}>seront faciles à tester</Bullet>
+            <Bullet tab={1}>prédicabilité -> bonne DX</Bullet>
+          </BulletList>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading size={1} textColor="#252525" caps>Motivations</Heading>
+          <BulletList>
+            <Bullet>Avec l’avènement des applications javascript “at scale”, gérer l’état d’une application JS devient très compliqué</Bullet>
+            <Bullet tab={1}>mise à jour non déterministe de l’état par n’importe quel composant logiciel de l’application</Bullet>
+            <Bullet tab={1}>nombreuses contraintes pour que l’application reste performante</Bullet>
+            <Bullet tab={1}>Asynchronisme + mutations</Bullet>
+            <Bullet>Redux propose un modèle de programmation pour rendre les mutations de l’état prédictibles</Bullet>
+          </BulletList>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading size={1} textColor="#252525" caps>Principes</Heading>
+          <BulletList>
+            <Bullet>Source unique de vérité (Store)</Bullet>
+            <Bullet>Etat en lecture seulement</Bullet>
+            <Bullet>Changements d'état via des fonctions pures</Bullet>
+          </BulletList>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading size={1} textColor="#252525" caps>Démo</Heading>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading size={1} textColor="#252525" caps>Fonctionnement</Heading>
+          <Image src={images.reduxgif.replace('/','')} width="100%" height="100%" />
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading size={1} textColor="#252525" caps>react-redux</Heading>
+          <BulletList>
+            <Bullet>Connecteur redux pour composants React</Bullet>
+            <Bullet>Très simple à utiliser</Bullet>
+            <Bullet>Deux APIs</Bullet>
+            <Bullet tab={1}>{'<Provider />'}</Bullet>
+            <Bullet tab={1}>connect (...)(...)</Bullet>
+          </BulletList>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading size={1} textColor="#252525" caps>react-redux</Heading>
+          <Editor file="letsreact/examples/reactredux1.js" width="100%" height={500} collapse={false}/>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading size={1} textColor="#252525" caps>react-redux</Heading>
+          <Editor file="letsreact/examples/reactredux2.js" width="100%" height={500} collapse={false}/>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading size={1} textColor="#252525" caps>react-redux</Heading>
+          <Editor file="letsreact/examples/reactredux3.js" width="100%" height={500} collapse={false}/>
         </Slide>
         <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>Conclusion</Heading>

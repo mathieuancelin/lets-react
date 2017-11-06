@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class HelloWhoBackup extends Component {
   static defaultProps = {
-    who: 'LavaJUG'
+    who: 'PWN'
   };
   render() {
     return (
@@ -30,7 +30,7 @@ export default class extends Component {
   render() {
     return (
       <div style={Style.container}>
-        <h1>Hello LavaJUG!</h1>
+        <h1>Hello PWN!</h1>
       </div>
     );
   }

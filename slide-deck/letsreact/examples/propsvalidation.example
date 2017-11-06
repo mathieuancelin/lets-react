@@ -15,7 +15,7 @@ class MyComponent extends Component {
 
   render() {
     return (
-      <h1>Hello LavaJUG!</h1>
+      <h1>Hello PWN!</h1>
     );
   }
 }

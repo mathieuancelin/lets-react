@@ -145,7 +145,7 @@ class Reddit extends Component {
 export default class extends Component {
   render() {
     return (
-      <div style={Styles.container}><h1>Hello LavaJUG</h1></div>
+      <div style={Styles.container}><h1>Hello PWN</h1></div>
     );
   }
 }

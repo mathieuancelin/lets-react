@@ -30,7 +30,7 @@ class Hello extends Component {
   render() {
     return (
       <div style={Style.container}>
-        <h1>Hello LavaJUG!</h1>
+        <h1>Hello PWN!</h1>
       </div>
     );
   }

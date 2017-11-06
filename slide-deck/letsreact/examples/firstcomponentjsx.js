@@ -55,7 +55,7 @@ export default class extends Component {
   render() {
     return (
       <div style={Style.container}>
-        <span style={Style.label}>Hello LavaJUG!</span>
+        <span style={Style.label}>Hello PWN!</span>
       </div>
     );
   }
