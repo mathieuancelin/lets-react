@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { MyRootComponent } from './components';
 
-let store = createStore(reducers);
+function reducer(state, next) { ... }
+
+let store = createStore(reducer);
 
 ReactDOM.render(
   <Provider store={store}>
