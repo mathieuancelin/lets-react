@@ -44,6 +44,7 @@ const images = {
   souseSpa: require("./images/souse-spa.png"),
   reduxintro: require("./images/redux-intro.svg"),
   reduxgif: require("./images/redux.gif"),
+  redux: require("./images/redux.jpg"),
 };
 
 const BulletList = React.createClass({
@@ -602,7 +603,14 @@ export default class extends React.Component {
             <Bullet>Source unique de vérité (Store)</Bullet>
             <Bullet>Etat en lecture seulement</Bullet>
             <Bullet>Changements d'état via des fonctions pures</Bullet>
+            <Bullet tab={1}>(state, action) => nextState</Bullet>
+            <Bullet>Etat dérivé de ce qui s'est passé</Bullet>
+            <Bullet tab={1}>CQRS, EventSourcing</Bullet>
           </BulletList>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading size={1} textColor="#252525" caps>Reducer</Heading>
+          <Image src={images.redux.replace('/','')} width="100%" height="100%" />
         </Slide>
         <Slide bgColor="primary">
           <Heading size={1} textColor="#252525" caps>Démo</Heading>
